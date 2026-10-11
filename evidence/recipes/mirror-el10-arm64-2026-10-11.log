@@ -6,3 +6,171 @@ AlmaLinux release 10.2 (Lavender Lion)
 === step 1: enable EPEL ===
 + dnf -y install epel-release
 AlmaLinux 10 - AppStream                        629 kB/s | 2.7 MB     00:04    
+AlmaLinux 10 - BaseOS                           393 kB/s |  65 MB     02:49    
+AlmaLinux 10 - CRB                              477 kB/s | 629 kB     00:01    
+AlmaLinux 10 - Extras                            17 kB/s |  13 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                    Arch      Version                    Repo      Size
+================================================================================
+Installing:
+ epel-release               noarch    10-6.el10                  extras    18 k
+Installing dependencies:
+ dbus-libs                  aarch64   1:1.14.10-5.el10           baseos   155 k
+ python3-dateutil           noarch    1:2.9.0.post0-1.el10_0     baseos   327 k
+ python3-dbus               aarch64   1.3.2-8.el10               baseos   159 k
+ python3-dnf-plugins-core   noarch    4.7.0-10.el10              baseos   294 k
+ python3-six                noarch    1.16.0-16.el10             baseos    41 k
+ python3-systemd            aarch64   235-11.el10                baseos   107 k
+Installing weak dependencies:
+ dnf-plugins-core           noarch    4.7.0-10.el10              baseos    37 k
+
+Transaction Summary
+================================================================================
+Install  8 Packages
+
+Total download size: 1.1 M
+Installed size: 3.7 M
+Downloading Packages:
+(1/8): dnf-plugins-core-4.7.0-10.el10.noarch.rp 1.2 MB/s |  37 kB     00:00    
+(2/8): dbus-libs-1.14.10-5.el10.aarch64.rpm     1.1 MB/s | 155 kB     00:00    
+(3/8): python3-dbus-1.3.2-8.el10.aarch64.rpm    923 kB/s | 159 kB     00:00    
+(4/8): python3-six-1.16.0-16.el10.noarch.rpm    3.2 MB/s |  41 kB     00:00    
+(5/8): python3-systemd-235-11.el10.aarch64.rpm  6.7 MB/s | 107 kB     00:00    
+(6/8): epel-release-10-6.el10.noarch.rpm        1.6 MB/s |  18 kB     00:00    
+(7/8): python3-dateutil-2.9.0.post0-1.el10_0.no 974 kB/s | 327 kB     00:00    
+(8/8): python3-dnf-plugins-core-4.7.0-10.el10.n 1.2 MB/s | 294 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           612 kB/s | 1.1 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-235-11.el10.aarch64                    1/8 
+  Installing       : python3-six-1.16.0-16.el10.noarch                      2/8 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el10_0.noarch         3/8 
+  Installing       : dbus-libs-1:1.14.10-5.el10.aarch64                     4/8 
+  Installing       : python3-dbus-1.3.2-8.el10.aarch64                      5/8 
+  Installing       : python3-dnf-plugins-core-4.7.0-10.el10.noarch          6/8 
+  Installing       : dnf-plugins-core-4.7.0-10.el10.noarch                  7/8 
+  Installing       : epel-release-10-6.el10.noarch                          8/8 
+  Running scriptlet: epel-release-10-6.el10.noarch                          8/8 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+
+Installed:
+  dbus-libs-1:1.14.10-5.el10.aarch64                                            
+  dnf-plugins-core-4.7.0-10.el10.noarch                                         
+  epel-release-10-6.el10.noarch                                                 
+  python3-dateutil-1:2.9.0.post0-1.el10_0.noarch                                
+  python3-dbus-1.3.2-8.el10.aarch64                                             
+  python3-dnf-plugins-core-4.7.0-10.el10.noarch                                 
+  python3-six-1.16.0-16.el10.noarch                                             
+  python3-systemd-235-11.el10.aarch64                                           
+
+Complete!
+=== step 2: point the repo at epel.cloud ===
++ echo '=== step 2: point the repo at epel.cloud ==='
++ sed -i -e 's|^metalink=|#metalink=|' -e 's|^#baseurl=https://download.example/pub|baseurl=https://epel.cloud/pub|' /etc/yum.repos.d/epel.repo
++ head -6
++ grep -E '^(baseurl|#metalink)' /etc/yum.repos.d/epel.repo
+baseurl=https://epel.cloud/pub/epel/$releasever${releasever_minor:+z}/Everything/$basearch/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel${releasever_minor:+-z}-$releasever&arch=$basearch
+baseurl=https://epel.cloud/pub/epel/$releasever${releasever_minor:+z}/Everything/$basearch/debug/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel${releasever_minor:+-z}-debug-$releasever&arch=$basearch
+baseurl=https://epel.cloud/pub/epel/$releasever${releasever_minor:+z}/Everything/source/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel${releasever_minor:+-z}-source-$releasever&arch=source
++ dnf '--disablerepo=*' --enablerepo=epel makecache
+Extra Packages for Enterprise Linux 10 - aarch6 3.1 MB/s | 6.6 MB     00:02    
+Last metadata expiration check: 0:00:01 ago on Sun Oct 11 10:29:49 2026.
+Metadata cache created.
++ echo '=== step 3: verify ==='
+=== step 3: verify ===
++ dnf repoinfo epel
++ grep -E 'Repo-baseurl|Repo-pkgs'
+Last metadata expiration check: 0:00:02 ago on Sun Oct 11 10:29:49 2026.
+Repo-pkgs          : 23819
+Repo-baseurl       : https://epel.cloud/pub/epel/10z/Everything/aarch64/
++ dnf repoinfo epel
++ grep -q https://epel.cloud/pub/epel/
++ grep Repo-baseurl
+Last metadata expiration check: 0:00:03 ago on Sun Oct 11 10:29:49 2026.
++ echo '=== install through the mirror (imports the EPEL GPG key) ==='
+=== install through the mirror (imports the EPEL GPG key) ===
++ dnf -y install htop
+Last metadata expiration check: 0:00:04 ago on Sun Oct 11 10:29:49 2026.
+Dependencies resolved.
+================================================================================
+ Package             Architecture   Version                 Repository     Size
+================================================================================
+Installing:
+ htop                aarch64        3.3.0-5.el10_0          epel          194 k
+Installing dependencies:
+ hwdata              noarch         0.379-10.8.el10         baseos        1.7 M
+ hwloc-libs          aarch64        2.11.1-4.el10           baseos        2.1 M
+ libnl3              aarch64        3.11.0-1.el10           baseos        349 k
+ libpciaccess        aarch64        0.16-16.el10            baseos         27 k
+ ocl-icd             aarch64        2.3.2-8.el10            baseos         58 k
+
+Transaction Summary
+================================================================================
+Install  6 Packages
+
+Total download size: 4.4 M
+Installed size: 15 M
+Downloading Packages:
+(1/6): libnl3-3.11.0-1.el10.aarch64.rpm         900 kB/s | 349 kB     00:00    
+(2/6): libpciaccess-0.16-16.el10.aarch64.rpm    403 kB/s |  27 kB     00:00    
+(3/6): ocl-icd-2.3.2-8.el10.aarch64.rpm         1.9 MB/s |  58 kB     00:00    
+(4/6): htop-3.3.0-5.el10_0.aarch64.rpm          384 kB/s | 194 kB     00:00    
+(5/6): hwdata-0.379-10.8.el10.noarch.rpm        792 kB/s | 1.7 MB     00:02    
+(6/6): hwloc-libs-2.11.1-4.el10.aarch64.rpm     665 kB/s | 2.1 MB     00:03    
+--------------------------------------------------------------------------------
+Total                                           1.1 MB/s | 4.4 MB     00:03     
+Extra Packages for Enterprise Linux 10 - aarch6 1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0xE37ED158:
+ Userid     : "Fedora (epel10) <epel@fedoraproject.org>"
+ Fingerprint: 7D8D 15CB FC4E 6268 8591 FB26 33D9 8517 E37E D158
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-10
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : ocl-icd-2.3.2-8.el10.aarch64                           1/6 
+  Installing       : libnl3-3.11.0-1.el10.aarch64                           2/6 
+  Installing       : hwdata-0.379-10.8.el10.noarch                          3/6 
+  Installing       : libpciaccess-0.16-16.el10.aarch64                      4/6 
+  Installing       : hwloc-libs-2.11.1-4.el10.aarch64                       5/6 
+  Installing       : htop-3.3.0-5.el10_0.aarch64                            6/6 
+  Running scriptlet: htop-3.3.0-5.el10_0.aarch64                            6/6 
+
+Installed:
+  htop-3.3.0-5.el10_0.aarch64              hwdata-0.379-10.8.el10.noarch       
+  hwloc-libs-2.11.1-4.el10.aarch64         libnl3-3.11.0-1.el10.aarch64        
+  libpciaccess-0.16-16.el10.aarch64        ocl-icd-2.3.2-8.el10.aarch64        
+
+Complete!
++ htop --version
++ head -1
+htop 3.3.0
++ echo '=== manual signature verification ==='
++ cd /tmp
+=== manual signature verification ===
++ dnf -y download htop
+Last metadata expiration check: 0:00:09 ago on Sun Oct 11 10:29:49 2026.
+htop-3.3.0-5.el10_0.aarch64.rpm                 1.1 MB/s | 194 kB     00:00    
++ ls -l htop-3.3.0-5.el10_0.aarch64.rpm
+-rw-r--r-- 1 root root 199003 Oct 11 10:29 htop-3.3.0-5.el10_0.aarch64.rpm
++ rpm -K htop-3.3.0-5.el10_0.aarch64.rpm
+htop-3.3.0-5.el10_0.aarch64.rpm: digests signatures OK
++ rpm -K htop-3.3.0-5.el10_0.aarch64.rpm
++ grep -q 'digests signatures OK'
++ echo 'RECIPE OK'
+RECIPE OK
+# exit status: 0

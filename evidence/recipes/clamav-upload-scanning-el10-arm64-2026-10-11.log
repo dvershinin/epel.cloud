@@ -4,3 +4,211 @@ AlmaLinux release 10.2 (Lavender Lion)
 # ---
 + dnf -y install epel-release
 AlmaLinux 10 - AppStream                        721 kB/s | 2.7 MB     00:03    
+AlmaLinux 10 - BaseOS                           629 kB/s |  65 MB     01:45    
+AlmaLinux 10 - CRB                              466 kB/s | 629 kB     00:01    
+AlmaLinux 10 - Extras                            17 kB/s |  13 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                    Arch      Version                    Repo      Size
+================================================================================
+Installing:
+ epel-release               noarch    10-6.el10                  extras    18 k
+Installing dependencies:
+ dbus-libs                  aarch64   1:1.14.10-5.el10           baseos   155 k
+ python3-dateutil           noarch    1:2.9.0.post0-1.el10_0     baseos   327 k
+ python3-dbus               aarch64   1.3.2-8.el10               baseos   159 k
+ python3-dnf-plugins-core   noarch    4.7.0-10.el10              baseos   294 k
+ python3-six                noarch    1.16.0-16.el10             baseos    41 k
+ python3-systemd            aarch64   235-11.el10                baseos   107 k
+Installing weak dependencies:
+ dnf-plugins-core           noarch    4.7.0-10.el10              baseos    37 k
+
+Transaction Summary
+================================================================================
+Install  8 Packages
+
+Total download size: 1.1 M
+Installed size: 3.7 M
+Downloading Packages:
+(1/8): dnf-plugins-core-4.7.0-10.el10.noarch.rp 1.0 MB/s |  37 kB     00:00    
+(2/8): dbus-libs-1.14.10-5.el10.aarch64.rpm     1.1 MB/s | 155 kB     00:00    
+(3/8): python3-dbus-1.3.2-8.el10.aarch64.rpm    1.0 MB/s | 159 kB     00:00    
+(4/8): python3-six-1.16.0-16.el10.noarch.rpm    3.5 MB/s |  41 kB     00:00    
+(5/8): python3-systemd-235-11.el10.aarch64.rpm  9.7 MB/s | 107 kB     00:00    
+(6/8): epel-release-10-6.el10.noarch.rpm        1.9 MB/s |  18 kB     00:00    
+(7/8): python3-dateutil-2.9.0.post0-1.el10_0.no 1.0 MB/s | 327 kB     00:00    
+(8/8): python3-dnf-plugins-core-4.7.0-10.el10.n 1.0 MB/s | 294 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           622 kB/s | 1.1 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-235-11.el10.aarch64                    1/8 
+  Installing       : python3-six-1.16.0-16.el10.noarch                      2/8 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el10_0.noarch         3/8 
+  Installing       : dbus-libs-1:1.14.10-5.el10.aarch64                     4/8 
+  Installing       : python3-dbus-1.3.2-8.el10.aarch64                      5/8 
+  Installing       : python3-dnf-plugins-core-4.7.0-10.el10.noarch          6/8 
+  Installing       : dnf-plugins-core-4.7.0-10.el10.noarch                  7/8 
+  Installing       : epel-release-10-6.el10.noarch                          8/8 
+  Running scriptlet: epel-release-10-6.el10.noarch                          8/8 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+
+Installed:
+  dbus-libs-1:1.14.10-5.el10.aarch64                                            
+  dnf-plugins-core-4.7.0-10.el10.noarch                                         
+  epel-release-10-6.el10.noarch                                                 
+  python3-dateutil-1:2.9.0.post0-1.el10_0.noarch                                
+  python3-dbus-1.3.2-8.el10.aarch64                                             
+  python3-dnf-plugins-core-4.7.0-10.el10.noarch                                 
+  python3-six-1.16.0-16.el10.noarch                                             
+  python3-systemd-235-11.el10.aarch64                                           
+
+Complete!
++ dnf -y install clamav clamd clamav-update
+Extra Packages for Enterprise Linux 10 - aarch6 2.7 MB/s | 6.6 MB     00:02    
+Last metadata expiration check: 0:00:02 ago on Sun Oct 11 10:28:44 2026.
+Dependencies resolved.
+================================================================================
+ Package                 Architecture  Version                 Repository  Size
+================================================================================
+Installing:
+ clamav                  aarch64       1.4.6-2.el10_2          epel       3.6 M
+ clamav-freshclam        aarch64       1.4.6-2.el10_2          epel       3.0 M
+ clamd                   aarch64       1.4.6-2.el10_2          epel        88 k
+Installing dependencies:
+ clamav-filesystem       noarch        1.4.6-2.el10_2          epel        17 k
+ clamav-lib              aarch64       1.4.6-2.el10_2          epel       3.6 M
+
+Transaction Summary
+================================================================================
+Install  5 Packages
+
+Total download size: 10 M
+Installed size: 139 M
+Downloading Packages:
+(1/5): clamav-filesystem-1.4.6-2.el10_2.noarch. 189 kB/s |  17 kB     00:00    
+(2/5): clamav-freshclam-1.4.6-2.el10_2.aarch64. 1.6 MB/s | 3.0 MB     00:01    
+(3/5): clamd-1.4.6-2.el10_2.aarch64.rpm         322 kB/s |  88 kB     00:00    
+(4/5): clamav-1.4.6-2.el10_2.aarch64.rpm        1.3 MB/s | 3.6 MB     00:02    
+(5/5): clamav-lib-1.4.6-2.el10_2.aarch64.rpm    1.3 MB/s | 3.6 MB     00:02    
+--------------------------------------------------------------------------------
+Total                                           2.9 MB/s |  10 MB     00:03     
+Extra Packages for Enterprise Linux 10 - aarch6 1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0xE37ED158:
+ Userid     : "Fedora (epel10) <epel@fedoraproject.org>"
+ Fingerprint: 7D8D 15CB FC4E 6268 8591 FB26 33D9 8517 E37E D158
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-10
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : clamav-lib-1.4.6-2.el10_2.aarch64                      1/5 
+  Running scriptlet: clamav-filesystem-1.4.6-2.el10_2.noarch                2/5 
+  Installing       : clamav-filesystem-1.4.6-2.el10_2.noarch                2/5 
+  Installing       : clamav-freshclam-1.4.6-2.el10_2.aarch64                3/5 
+  Running scriptlet: clamav-freshclam-1.4.6-2.el10_2.aarch64                3/5 
+  Installing       : clamav-1.4.6-2.el10_2.aarch64                          4/5 
+  Running scriptlet: clamav-1.4.6-2.el10_2.aarch64                          4/5 
+  Running scriptlet: clamd-1.4.6-2.el10_2.aarch64                           5/5 
+  Installing       : clamd-1.4.6-2.el10_2.aarch64                           5/5 
+  Running scriptlet: clamd-1.4.6-2.el10_2.aarch64                           5/5 
+Failed to parse conditionalized execute bit for "/run/log/journal/868bd5cba96741cb9f366da74ba000ea/system.journal": Operation not supported
+
+
+Installed:
+  clamav-1.4.6-2.el10_2.aarch64                                                 
+  clamav-filesystem-1.4.6-2.el10_2.noarch                                       
+  clamav-freshclam-1.4.6-2.el10_2.aarch64                                       
+  clamav-lib-1.4.6-2.el10_2.aarch64                                             
+  clamd-1.4.6-2.el10_2.aarch64                                                  
+
+Complete!
++ echo '=== 2. fetch signatures ==='
+=== 2. fetch signatures ===
++ freshclam
+ClamAV update process started at Sun Oct 11 10:28:51 2026
+daily database available for download (remote version: 28150)
+Testing database: '/var/lib/clamav/tmp.33457e84ff/clamav-f504f44caa659878aa06e6de13b32912.tmp-daily.cvd' ...
+Database test passed.
+daily.cvd updated (version: 28150, sigs: 355760, f-level: 90, builder: svc.clamav-publisher)
+main database available for download (remote version: 63)
+Testing database: '/var/lib/clamav/tmp.33457e84ff/clamav-0f9658c441fe07d8eee4ef3959104859.tmp-main.cvd' ...
+Database test passed.
+main.cvd updated (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode database available for download (remote version: 339)
+Testing database: '/var/lib/clamav/tmp.33457e84ff/clamav-69c5c3f04708320a0d38fc8d0a8b6ace.tmp-bytecode.cvd' ...
+Database test passed.
+bytecode.cvd updated (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
++ systemctl enable --now clamav-freshclam
+Created symlink '/etc/systemd/system/multi-user.target.wants/clamav-freshclam.service' → '/usr/lib/systemd/system/clamav-freshclam.service'.
+=== 3. configure and start clamd ===
++ echo '=== 3. configure and start clamd ==='
++ sed -i 's|^#LocalSocket /run/clamd.scan/clamd.sock|LocalSocket /run/clamd.scan/clamd.sock|' /etc/clamd.d/scan.conf
++ systemctl enable --now clamd@scan
+Created symlink '/etc/systemd/system/multi-user.target.wants/clamd@scan.service' → '/usr/lib/systemd/system/clamd@.service'.
+++ seq 1 60
++ for _ in $(seq 1 60)
++ '[' -S /run/clamd.scan/clamd.sock ']'
++ break
++ test -S /run/clamd.scan/clamd.sock
++ echo '=== verify with EICAR ==='
++ printf 'X5O!P%%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'
+=== verify with EICAR ===
++ set +e
++ clamdscan --fdpass /tmp/eicar.txt
+/tmp/eicar.txt: Eicar-Test-Signature FOUND
+
+----------- SCAN SUMMARY -----------
+Infected files: 1
+Time: 0.002 sec (0 m 0 s)
+Start Date: 2026:10:11 10:29:38
+End Date:   2026:10:11 10:29:38
++ RC=1
++ set -e
++ '[' 1 -eq 1 ']'
++ grep -q FOUND
++ clamdscan --fdpass /tmp/eicar.txt
++ clamdscan --fdpass /tmp/eicar.txt
+/tmp/eicar.txt: Eicar-Test-Signature FOUND
+
+----------- SCAN SUMMARY -----------
+Infected files: 1
+Time: 0.000 sec (0 m 0 s)
+Start Date: 2026:10:11 10:29:38
+End Date:   2026:10:11 10:29:38
+=== 4. upload sweep timer ===
++ true
++ echo '=== 4. upload sweep timer ==='
++ tee /etc/systemd/system/clamdscan-uploads.service
++ tee /etc/systemd/system/clamdscan-uploads.timer
++ mkdir -p /var/lib/clamav-quarantine /srv/uploads
++ systemctl daemon-reload
++ systemctl enable --now clamdscan-uploads.timer
+Created symlink '/etc/systemd/system/timers.target.wants/clamdscan-uploads.timer' → '/etc/systemd/system/clamdscan-uploads.timer'.
++ systemctl list-timers clamdscan-uploads.timer --no-pager
+NEXT                         LEFT LAST PASSED UNIT                    ACTIVATES
+Sun 2026-10-11 11:05:37 UTC 35min -         - clamdscan-uploads.timer clamdscan-uploads.service
+
+1 timers listed.
+Pass --all to see loaded but inactive timers, too.
+=== sweep quarantines an infected upload ===
++ echo '=== sweep quarantines an infected upload ==='
++ cp /tmp/eicar.txt /srv/uploads/invoice.pdf.exe
++ systemctl start clamdscan-uploads.service
++ ls -l /var/lib/clamav-quarantine/
+total 4
+-rw-r--r-- 1 root root 68 Oct 11 10:29 invoice.pdf.exe
++ test -f /var/lib/clamav-quarantine/invoice.pdf.exe
++ test '!' -f /srv/uploads/invoice.pdf.exe
++ echo 'RECIPE OK'
+RECIPE OK
+# exit status: 0

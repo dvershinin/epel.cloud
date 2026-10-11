@@ -4,3 +4,592 @@ AlmaLinux release 10.2 (Lavender Lion)
 # ---
 + dnf -y install epel-release
 AlmaLinux 10 - AppStream                        991 kB/s | 2.7 MB     00:02    
+AlmaLinux 10 - BaseOS                           584 kB/s |  65 MB     01:54    
+AlmaLinux 10 - CRB                              227 kB/s | 629 kB     00:02    
+AlmaLinux 10 - Extras                            14 kB/s |  13 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                    Arch      Version                    Repo      Size
+================================================================================
+Installing:
+ epel-release               noarch    10-6.el10                  extras    18 k
+Installing dependencies:
+ dbus-libs                  aarch64   1:1.14.10-5.el10           baseos   155 k
+ python3-dateutil           noarch    1:2.9.0.post0-1.el10_0     baseos   327 k
+ python3-dbus               aarch64   1.3.2-8.el10               baseos   159 k
+ python3-dnf-plugins-core   noarch    4.7.0-10.el10              baseos   294 k
+ python3-six                noarch    1.16.0-16.el10             baseos    41 k
+ python3-systemd            aarch64   235-11.el10                baseos   107 k
+Installing weak dependencies:
+ dnf-plugins-core           noarch    4.7.0-10.el10              baseos    37 k
+
+Transaction Summary
+================================================================================
+Install  8 Packages
+
+Total download size: 1.1 M
+Installed size: 3.7 M
+Downloading Packages:
+(1/8): dbus-libs-1.14.10-5.el10.aarch64.rpm     884 kB/s | 155 kB     00:00    
+(2/8): dnf-plugins-core-4.7.0-10.el10.noarch.rp 130 kB/s |  37 kB     00:00    
+(3/8): python3-dbus-1.3.2-8.el10.aarch64.rpm    699 kB/s | 159 kB     00:00    
+(4/8): python3-six-1.16.0-16.el10.noarch.rpm    1.2 MB/s |  41 kB     00:00    
+(5/8): python3-dateutil-2.9.0.post0-1.el10_0.no 729 kB/s | 327 kB     00:00    
+(6/8): epel-release-10-6.el10.noarch.rpm        990 kB/s |  18 kB     00:00    
+(7/8): python3-systemd-235-11.el10.aarch64.rpm  2.1 MB/s | 107 kB     00:00    
+(8/8): python3-dnf-plugins-core-4.7.0-10.el10.n 855 kB/s | 294 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           554 kB/s | 1.1 MB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-235-11.el10.aarch64                    1/8 
+  Installing       : python3-six-1.16.0-16.el10.noarch                      2/8 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el10_0.noarch         3/8 
+  Installing       : dbus-libs-1:1.14.10-5.el10.aarch64                     4/8 
+  Installing       : python3-dbus-1.3.2-8.el10.aarch64                      5/8 
+  Installing       : python3-dnf-plugins-core-4.7.0-10.el10.noarch          6/8 
+  Installing       : dnf-plugins-core-4.7.0-10.el10.noarch                  7/8 
+  Installing       : epel-release-10-6.el10.noarch                          8/8 
+  Running scriptlet: epel-release-10-6.el10.noarch                          8/8 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+
+Installed:
+  dbus-libs-1:1.14.10-5.el10.aarch64                                            
+  dnf-plugins-core-4.7.0-10.el10.noarch                                         
+  epel-release-10-6.el10.noarch                                                 
+  python3-dateutil-1:2.9.0.post0-1.el10_0.noarch                                
+  python3-dbus-1.3.2-8.el10.aarch64                                             
+  python3-dnf-plugins-core-4.7.0-10.el10.noarch                                 
+  python3-six-1.16.0-16.el10.noarch                                             
+  python3-systemd-235-11.el10.aarch64                                           
+
+Complete!
++ dnf -y install fail2ban openssh-server nftables
+Extra Packages for Enterprise Linux 10 - aarch6 1.0 MB/s | 6.6 MB     00:06    
+Last metadata expiration check: 0:00:01 ago on Sun Oct 11 10:28:58 2026.
+Dependencies resolved.
+=============================================================================================
+ Package                       Arch     Version                              Repo        Size
+=============================================================================================
+Installing:
+ fail2ban                      noarch   1.1.0-6.el10_0                       epel       9.4 k
+ nftables                      aarch64  1:1.1.5-6.el10_2                     baseos     443 k
+ openssh-server                aarch64  9.9p1-28.el10_2.alma.1               baseos     525 k
+Installing dependencies:
+ diffutils                     aarch64  3.10-8.el10                          baseos     406 k
+ emacs-filesystem              noarch   1:29.4-13.el10_2                     baseos     8.3 k
+ exim                          aarch64  4.99.1-1.el10_2                      epel       1.5 M
+ fail2ban-firewalld            noarch   1.1.0-6.el10_0                       epel       9.6 k
+ fail2ban-sendmail             noarch   1.1.0-6.el10_0                       epel        12 k
+ fail2ban-server               noarch   1.1.0-6.el10_0                       epel       561 k
+ firewalld                     noarch   2.4.3-4.el10_2                       baseos     568 k
+ firewalld-filesystem          noarch   2.4.3-4.el10_2                       baseos     7.6 k
+ gobject-introspection         aarch64  1.79.1-6.el10                        baseos     111 k
+ groff-base                    aarch64  1.23.0-10.el10                       baseos     1.1 M
+ ipset-libs                    aarch64  7.22-13.el10_2                       baseos      67 k
+ iptables-libs                 aarch64  1.8.11-16.el10_2                     baseos     423 k
+ jansson                       aarch64  2.14-3.el10                          baseos      47 k
+ libdb                         aarch64  5.3.28-64.el10_0                     epel       734 k
+ libgsasl                      aarch64  1.10.0-17.el10_2                     epel       153 k
+ libidn                        aarch64  1.42-4.el10_0                        epel       197 k
+ libmnl                        aarch64  1.0.5-7.el10                         baseos      28 k
+ libnetfilter_conntrack        aarch64  1.0.9-12.el10                        baseos      59 k
+ libnfnetlink                  aarch64  1.0.2-3.el10                         baseos      29 k
+ libnftnl                      aarch64  1.3.0-3.el10                         baseos      85 k
+ libnsl2                       aarch64  2.0.1-1.el10_0                       epel        30 k
+ libntlm                       aarch64  1.8-1.el10_0                         epel        32 k
+ libopendmarc                  aarch64  1.4.2-33.el10_2                      epel        32 k
+ libselinux-utils              aarch64  3.10-1.el10                          baseos     112 k
+ libspf2                       aarch64  1.2.11-16.20210922git4915c308.el10_0 epel        67 k
+ libtirpc                      aarch64  1.3.5-1.el10                         baseos      95 k
+ ncurses                       aarch64  6.4-15.20240127.el10_1               baseos     412 k
+ openssh                       aarch64  9.9p1-28.el10_2.alma.1               baseos     350 k
+ perl-AutoLoader               noarch   5.74-515.el10_2                      appstream   20 k
+ perl-B                        aarch64  1.89-515.el10_2                      appstream  180 k
+ perl-Carp                     noarch   1.54-511.el10                        appstream   29 k
+ perl-Class-Struct             noarch   0.68-515.el10_2                      appstream   20 k
+ perl-Data-Dumper              aarch64  2.189-512.el10                       appstream   55 k
+ perl-Digest                   noarch   1.20-511.el10                        appstream   25 k
+ perl-Digest-MD5               aarch64  2.59-6.el10                          appstream   36 k
+ perl-DynaLoader               aarch64  1.56-515.el10_2                      appstream   24 k
+ perl-Encode                   aarch64  4:3.21-511.el10                      appstream  1.0 M
+ perl-Errno                    aarch64  1.38-515.el10_2                      appstream   13 k
+ perl-Exporter                 noarch   5.78-511.el10                        appstream   31 k
+ perl-Fcntl                    aarch64  1.18-515.el10_2                      appstream   28 k
+ perl-File-Basename            noarch   2.86-515.el10_2                      appstream   15 k
+ perl-File-Path                noarch   2.18-512.el10                        appstream   35 k
+ perl-File-Temp                noarch   1:0.231.100-512.el10                 appstream   59 k
+ perl-File-stat                noarch   1.14-515.el10_2                      appstream   15 k
+ perl-FileHandle               noarch   2.05-515.el10_2                      appstream   14 k
+ perl-Getopt-Long              noarch   1:2.58-3.el10                        appstream   67 k
+ perl-Getopt-Std               noarch   1.14-515.el10_2                      appstream   14 k
+ perl-HTTP-Tiny                noarch   0.088-512.el10                       appstream   56 k
+ perl-IO                       aarch64  1.55-515.el10_2                      appstream   82 k
+ perl-IO-Socket-IP             noarch   0.42-512.el10                        appstream   42 k
+ perl-IO-Socket-SSL            noarch   2.085-3.el10                         appstream  229 k
+ perl-IPC-Open3                noarch   1.22-515.el10_2                      appstream   20 k
+ perl-MIME-Base64              aarch64  3.16-511.el10                        appstream   30 k
+ perl-Mozilla-CA               noarch   20231213-5.el10                      appstream   14 k
+ perl-Net-SSLeay               aarch64  1.94-8.el10                          appstream  357 k
+ perl-POSIX                    aarch64  2.20-515.el10_2                      appstream   95 k
+ perl-PathTools                aarch64  3.91-512.el10                        appstream   88 k
+ perl-Pod-Escapes              noarch   1:1.07-511.el10                      appstream   20 k
+ perl-Pod-Perldoc              noarch   3.28.01-512.el10                     appstream   88 k
+ perl-Pod-Simple               noarch   1:3.45-511.el10                      appstream  222 k
+ perl-Pod-Usage                noarch   4:2.03-511.el10                      appstream   40 k
+ perl-Scalar-List-Utils        aarch64  5:1.63-511.el10                      appstream   71 k
+ perl-SelectSaver              noarch   1.02-515.el10_2                      appstream   10 k
+ perl-Socket                   aarch64  4:2.038-511.el10                     appstream   55 k
+ perl-Storable                 aarch64  1:3.32-511.el10                      appstream   97 k
+ perl-Symbol                   noarch   1.09-515.el10_2                      appstream   12 k
+ perl-Term-ANSIColor           noarch   5.01-512.el10                        appstream   48 k
+ perl-Term-Cap                 noarch   1.18-511.el10                        appstream   22 k
+ perl-Text-ParseWords          noarch   3.31-511.el10                        appstream   16 k
+ perl-Text-Tabs+Wrap           noarch   2024.001-511.el10                    appstream   22 k
+ perl-Time-Local               noarch   2:1.350-511.el10                     appstream   34 k
+ perl-URI                      noarch   5.27-3.el10                          appstream  137 k
+ perl-base                     noarch   2.27-515.el10_2                      appstream   14 k
+ perl-constant                 noarch   1.33-512.el10                        appstream   23 k
+ perl-if                       noarch   0.61.000-515.el10_2                  appstream   12 k
+ perl-interpreter              aarch64  4:5.40.2-515.el10_2                  appstream   71 k
+ perl-libnet                   noarch   3.15-512.el10                        appstream  130 k
+ perl-libs                     aarch64  4:5.40.2-515.el10_2                  appstream  2.3 M
+ perl-locale                   noarch   1.12-515.el10_2                      appstream   12 k
+ perl-mro                      aarch64  1.29-515.el10_2                      appstream   28 k
+ perl-overload                 noarch   1.37-515.el10_2                      appstream   44 k
+ perl-overloading              noarch   0.02-515.el10_2                      appstream   11 k
+ perl-parent                   noarch   1:0.241-512.el10                     appstream   15 k
+ perl-podlators                noarch   1:5.01-511.el10                      appstream  127 k
+ perl-vars                     noarch   1.05-515.el10_2                      appstream   11 k
+ policycoreutils               aarch64  3.10-2.el10_2                        baseos     234 k
+ python3-firewall              noarch   2.4.3-4.el10_2                       baseos     517 k
+ python3-gobject-base          aarch64  3.46.0-7.el10                        baseos     201 k
+ python3-gobject-base-noarch   noarch   3.46.0-7.el10                        baseos     193 k
+ python3-nftables              aarch64  1:1.1.5-6.el10_2                     baseos      25 k
+Installing weak dependencies:
+ ipset                         aarch64  7.22-13.el10_2                       baseos      44 k
+ iptables-nft                  aarch64  1.8.11-16.el10_2                     appstream  189 k
+ libcap-ng-python3             aarch64  0.8.4-6.el10                         appstream   30 k
+ perl-NDBM_File                aarch64  1.17-515.el10_2                      appstream   21 k
+ publicsuffix-list             noarch   20240107-5.el10                      appstream   87 k
+
+Transaction Summary
+=============================================================================================
+Install  98 Packages
+
+Total download size: 16 M
+Installed size: 62 M
+Downloading Packages:
+(1/98): perl-AutoLoader-5.74-515.el10_2.noarch. 273 kB/s |  20 kB     00:00    
+(2/98): libcap-ng-python3-0.8.4-6.el10.aarch64. 293 kB/s |  30 kB     00:00    
+(3/98): perl-B-1.89-515.el10_2.aarch64.rpm      684 kB/s | 180 kB     00:00    
+(4/98): perl-Carp-1.54-511.el10.noarch.rpm      103 kB/s |  29 kB     00:00    
+(5/98): perl-Class-Struct-0.68-515.el10_2.noarc 305 kB/s |  20 kB     00:00    
+(6/98): perl-Data-Dumper-2.189-512.el10.aarch64 325 kB/s |  55 kB     00:00    
+(7/98): perl-Digest-MD5-2.59-6.el10.aarch64.rpm 299 kB/s |  36 kB     00:00    
+(8/98): perl-DynaLoader-1.56-515.el10_2.aarch64 428 kB/s |  24 kB     00:00    
+(9/98): iptables-nft-1.8.11-16.el10_2.aarch64.r 156 kB/s | 189 kB     00:01    
+(10/98): perl-Errno-1.38-515.el10_2.aarch64.rpm 167 kB/s |  13 kB     00:00    
+(11/98): perl-Digest-1.20-511.el10.noarch.rpm    25 kB/s |  25 kB     00:00    
+(12/98): perl-Exporter-5.78-511.el10.noarch.rpm 199 kB/s |  31 kB     00:00    
+(13/98): perl-Fcntl-1.18-515.el10_2.aarch64.rpm 298 kB/s |  28 kB     00:00    
+(14/98): perl-File-Basename-2.86-515.el10_2.noa 355 kB/s |  15 kB     00:00    
+(15/98): perl-File-Path-2.18-512.el10.noarch.rp 352 kB/s |  35 kB     00:00    
+(16/98): perl-File-stat-1.14-515.el10_2.noarch. 340 kB/s |  15 kB     00:00    
+(17/98): perl-File-Temp-0.231.100-512.el10.noar 361 kB/s |  59 kB     00:00    
+(18/98): perl-FileHandle-2.05-515.el10_2.noarch 231 kB/s |  14 kB     00:00    
+(19/98): perl-Getopt-Std-1.14-515.el10_2.noarch 127 kB/s |  14 kB     00:00    
+(20/98): perl-Getopt-Long-2.58-3.el10.noarch.rp 218 kB/s |  67 kB     00:00    
+(21/98): perl-IO-1.55-515.el10_2.aarch64.rpm    416 kB/s |  82 kB     00:00    
+(22/98): perl-HTTP-Tiny-0.088-512.el10.noarch.r 123 kB/s |  56 kB     00:00    
+(23/98): perl-IO-Socket-IP-0.42-512.el10.noarch 224 kB/s |  42 kB     00:00    
+(24/98): perl-IPC-Open3-1.22-515.el10_2.noarch. 246 kB/s |  20 kB     00:00    
+(25/98): perl-MIME-Base64-3.16-511.el10.aarch64  51 kB/s |  30 kB     00:00    
+(26/98): perl-Mozilla-CA-20231213-5.el10.noarch  53 kB/s |  14 kB     00:00    
+(27/98): perl-NDBM_File-1.17-515.el10_2.aarch64 195 kB/s |  21 kB     00:00    
+(28/98): perl-IO-Socket-SSL-2.085-3.el10.noarch 145 kB/s | 229 kB     00:01    
+(29/98): perl-Encode-3.21-511.el10.aarch64.rpm  342 kB/s | 1.0 MB     00:03    
+(30/98): perl-PathTools-3.91-512.el10.aarch64.r 453 kB/s |  88 kB     00:00    
+(31/98): perl-POSIX-2.20-515.el10_2.aarch64.rpm 368 kB/s |  95 kB     00:00    
+(32/98): perl-Pod-Escapes-1.07-511.el10.noarch. 489 kB/s |  20 kB     00:00    
+(33/98): perl-Pod-Perldoc-3.28.01-512.el10.noar 588 kB/s |  88 kB     00:00    
+(34/98): perl-Pod-Usage-2.03-511.el10.noarch.rp 572 kB/s |  40 kB     00:00    
+(35/98): perl-Scalar-List-Utils-1.63-511.el10.a 461 kB/s |  71 kB     00:00    
+(36/98): perl-SelectSaver-1.02-515.el10_2.noarc 468 kB/s |  10 kB     00:00    
+(37/98): perl-Pod-Simple-3.45-511.el10.noarch.r 539 kB/s | 222 kB     00:00    
+(38/98): perl-Storable-3.32-511.el10.aarch64.rp 417 kB/s |  97 kB     00:00    
+(39/98): perl-Symbol-1.09-515.el10_2.noarch.rpm 389 kB/s |  12 kB     00:00    
+(40/98): perl-Term-ANSIColor-5.01-512.el10.noar 552 kB/s |  48 kB     00:00    
+(41/98): perl-Term-Cap-1.18-511.el10.noarch.rpm 526 kB/s |  22 kB     00:00    
+(42/98): perl-Socket-2.038-511.el10.aarch64.rpm 130 kB/s |  55 kB     00:00    
+(43/98): perl-Text-ParseWords-3.31-511.el10.noa 331 kB/s |  16 kB     00:00    
+(44/98): perl-Text-Tabs+Wrap-2024.001-511.el10. 282 kB/s |  22 kB     00:00    
+(45/98): perl-Time-Local-1.350-511.el10.noarch. 426 kB/s |  34 kB     00:00    
+(46/98): perl-base-2.27-515.el10_2.noarch.rpm   474 kB/s |  14 kB     00:00    
+(47/98): perl-constant-1.33-512.el10.noarch.rpm 322 kB/s |  23 kB     00:00    
+(48/98): perl-if-0.61.000-515.el10_2.noarch.rpm 245 kB/s |  12 kB     00:00    
+(49/98): perl-interpreter-5.40.2-515.el10_2.aar 309 kB/s |  71 kB     00:00    
+(50/98): perl-URI-5.27-3.el10.noarch.rpm        178 kB/s | 137 kB     00:00    
+(51/98): perl-libnet-3.15-512.el10.noarch.rpm   377 kB/s | 130 kB     00:00    
+(52/98): perl-locale-1.12-515.el10_2.noarch.rpm 573 kB/s |  12 kB     00:00    
+(53/98): perl-mro-1.29-515.el10_2.aarch64.rpm   433 kB/s |  28 kB     00:00    
+(54/98): perl-Net-SSLeay-1.94-8.el10.aarch64.rp 139 kB/s | 357 kB     00:02    
+(55/98): perl-overloading-0.02-515.el10_2.noarc 117 kB/s |  11 kB     00:00    
+(56/98): perl-parent-0.241-512.el10.noarch.rpm  285 kB/s |  15 kB     00:00    
+(57/98): perl-overload-1.37-515.el10_2.noarch.r 152 kB/s |  44 kB     00:00    
+(58/98): perl-vars-1.05-515.el10_2.noarch.rpm   287 kB/s |  11 kB     00:00    
+(59/98): perl-podlators-5.01-511.el10.noarch.rp 693 kB/s | 127 kB     00:00    
+(60/98): publicsuffix-list-20240107-5.el10.noar 641 kB/s |  87 kB     00:00    
+(61/98): emacs-filesystem-29.4-13.el10_2.noarch 425 kB/s | 8.3 kB     00:00    
+(62/98): diffutils-3.10-8.el10.aarch64.rpm      470 kB/s | 406 kB     00:00    
+(63/98): firewalld-filesystem-2.4.3-4.el10_2.no 361 kB/s | 7.6 kB     00:00    
+(64/98): firewalld-2.4.3-4.el10_2.noarch.rpm    602 kB/s | 568 kB     00:00    
+(65/98): gobject-introspection-1.79.1-6.el10.aa 166 kB/s | 111 kB     00:00    
+(66/98): ipset-7.22-13.el10_2.aarch64.rpm        59 kB/s |  44 kB     00:00    
+(67/98): ipset-libs-7.22-13.el10_2.aarch64.rpm   86 kB/s |  67 kB     00:00    
+(68/98): groff-base-1.23.0-10.el10.aarch64.rpm  399 kB/s | 1.1 MB     00:02    
+(69/98): jansson-2.14-3.el10.aarch64.rpm        277 kB/s |  47 kB     00:00    
+(70/98): libmnl-1.0.5-7.el10.aarch64.rpm        380 kB/s |  28 kB     00:00    
+(71/98): libnetfilter_conntrack-1.0.9-12.el10.a 303 kB/s |  59 kB     00:00    
+(72/98): libnfnetlink-1.0.2-3.el10.aarch64.rpm  214 kB/s |  29 kB     00:00    
+(73/98): iptables-libs-1.8.11-16.el10_2.aarch64 304 kB/s | 423 kB     00:01    
+(74/98): libnftnl-1.3.0-3.el10.aarch64.rpm      559 kB/s |  85 kB     00:00    
+(75/98): libtirpc-1.3.5-1.el10.aarch64.rpm      391 kB/s |  95 kB     00:00    
+(76/98): libselinux-utils-3.10-1.el10.aarch64.r 401 kB/s | 112 kB     00:00    
+(77/98): ncurses-6.4-15.20240127.el10_1.aarch64 274 kB/s | 412 kB     00:01    
+(78/98): nftables-1.1.5-6.el10_2.aarch64.rpm    292 kB/s | 443 kB     00:01    
+(79/98): perl-libs-5.40.2-515.el10_2.aarch64.rp 343 kB/s | 2.3 MB     00:06    
+(80/98): openssh-9.9p1-28.el10_2.alma.1.aarch64 424 kB/s | 350 kB     00:00    
+(81/98): policycoreutils-3.10-2.el10_2.aarch64. 278 kB/s | 234 kB     00:00    
+(82/98): openssh-server-9.9p1-28.el10_2.alma.1. 224 kB/s | 525 kB     00:02    
+(83/98): python3-gobject-base-3.46.0-7.el10.aar  87 kB/s | 201 kB     00:02    
+(84/98): python3-nftables-1.1.5-6.el10_2.aarch6 203 kB/s |  25 kB     00:00    
+(85/98): python3-gobject-base-noarch-3.46.0-7.e  73 kB/s | 193 kB     00:02    
+(86/98): fail2ban-1.1.0-6.el10_0.noarch.rpm      14 kB/s | 9.4 kB     00:00    
+(87/98): python3-firewall-2.4.3-4.el10_2.noarch 101 kB/s | 517 kB     00:05    
+(88/98): fail2ban-firewalld-1.1.0-6.el10_0.noar 5.1 kB/s | 9.6 kB     00:01    
+(89/98): fail2ban-sendmail-1.1.0-6.el10_0.noarc 6.8 kB/s |  12 kB     00:01    
+(90/98): fail2ban-server-1.1.0-6.el10_0.noarch.  78 kB/s | 561 kB     00:07    
+(91/98): libdb-5.3.28-64.el10_0.aarch64.rpm     101 kB/s | 734 kB     00:07    
+(92/98): libgsasl-1.10.0-17.el10_2.aarch64.rpm  956 kB/s | 153 kB     00:00    
+(93/98): libnsl2-2.0.1-1.el10_0.aarch64.rpm     454 kB/s |  30 kB     00:00    
+(94/98): exim-4.99.1-1.el10_2.aarch64.rpm       132 kB/s | 1.5 MB     00:11    
+(95/98): libidn-1.42-4.el10_0.aarch64.rpm       1.4 MB/s | 197 kB     00:00    
+(96/98): libntlm-1.8-1.el10_0.aarch64.rpm       422 kB/s |  32 kB     00:00    
+(97/98): libopendmarc-1.4.2-33.el10_2.aarch64.r 533 kB/s |  32 kB     00:00    
+(98/98): libspf2-1.2.11-16.20210922git4915c308. 1.9 MB/s |  67 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           474 kB/s |  16 MB     00:34     
+Extra Packages for Enterprise Linux 10 - aarch6 1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0xE37ED158:
+ Userid     : "Fedora (epel10) <epel@fedoraproject.org>"
+ Fingerprint: 7D8D 15CB FC4E 6268 8591 FB26 33D9 8517 E37E D158
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-10
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Running scriptlet: firewalld-2.4.3-4.el10_2.noarch                        1/1 
+  Preparing        :                                                        1/1 
+  Installing       : libmnl-1.0.5-7.el10.aarch64                           1/98 
+  Installing       : libnftnl-1.3.0-3.el10.aarch64                         2/98 
+  Installing       : libspf2-1.2.11-16.20210922git4915c308.el10_0.aarch    3/98 
+  Installing       : libopendmarc-1.4.2-33.el10_2.aarch64                  4/98 
+  Installing       : ipset-libs-7.22-13.el10_2.aarch64                     5/98 
+  Installing       : ipset-7.22-13.el10_2.aarch64                          6/98 
+  Installing       : libntlm-1.8-1.el10_0.aarch64                          7/98 
+  Installing       : libdb-5.3.28-64.el10_0.aarch64                        8/98 
+  Installing       : openssh-9.9p1-28.el10_2.alma.1.aarch64                9/98 
+  Installing       : ncurses-6.4-15.20240127.el10_1.aarch64               10/98 
+  Installing       : libtirpc-1.3.5-1.el10.aarch64                        11/98 
+  Installing       : libnsl2-2.0.1-1.el10_0.aarch64                       12/98 
+  Installing       : libselinux-utils-3.10-1.el10.aarch64                 13/98 
+  Installing       : libnfnetlink-1.0.2-3.el10.aarch64                    14/98 
+  Installing       : libnetfilter_conntrack-1.0.9-12.el10.aarch64         15/98 
+  Installing       : iptables-libs-1.8.11-16.el10_2.aarch64               16/98 
+  Installing       : iptables-nft-1.8.11-16.el10_2.aarch64                17/98 
+  Running scriptlet: iptables-nft-1.8.11-16.el10_2.aarch64                17/98 
+  Installing       : jansson-2.14-3.el10.aarch64                          18/98 
+  Installing       : nftables-1:1.1.5-6.el10_2.aarch64                    19/98 
+  Running scriptlet: nftables-1:1.1.5-6.el10_2.aarch64                    19/98 
+  Installing       : fail2ban-server-1.1.0-6.el10_0.noarch                20/98 
+  Running scriptlet: fail2ban-server-1.1.0-6.el10_0.noarch                20/98 
+  Installing       : python3-nftables-1:1.1.5-6.el10_2.aarch64            21/98 
+  Running scriptlet: groff-base-1.23.0-10.el10.aarch64                    22/98 
+  Installing       : groff-base-1.23.0-10.el10.aarch64                    22/98 
+  Running scriptlet: groff-base-1.23.0-10.el10.aarch64                    22/98 
+  Installing       : perl-Digest-1.20-511.el10.noarch                     23/98 
+  Installing       : perl-Digest-MD5-2.59-6.el10.aarch64                  24/98 
+  Installing       : perl-B-1.89-515.el10_2.aarch64                       25/98 
+  Installing       : perl-FileHandle-2.05-515.el10_2.noarch               26/98 
+  Installing       : perl-Data-Dumper-2.189-512.el10.aarch64              27/98 
+  Installing       : perl-libnet-3.15-512.el10.noarch                     28/98 
+  Installing       : perl-URI-5.27-3.el10.noarch                          29/98 
+  Installing       : perl-AutoLoader-5.74-515.el10_2.noarch               30/98 
+  Installing       : perl-Text-Tabs+Wrap-2024.001-511.el10.noarch         31/98 
+  Installing       : perl-Mozilla-CA-20231213-5.el10.noarch               32/98 
+  Installing       : perl-if-0.61.000-515.el10_2.noarch                   33/98 
+  Installing       : perl-locale-1.12-515.el10_2.noarch                   34/98 
+  Installing       : perl-IO-Socket-IP-0.42-512.el10.noarch               35/98 
+  Installing       : perl-Time-Local-2:1.350-511.el10.noarch              36/98 
+  Installing       : perl-File-Path-2.18-512.el10.noarch                  37/98 
+  Installing       : perl-Pod-Escapes-1:1.07-511.el10.noarch              38/98 
+  Installing       : perl-IO-Socket-SSL-2.085-3.el10.noarch               39/98 
+  Installing       : perl-Net-SSLeay-1.94-8.el10.aarch64                  40/98 
+  Installing       : perl-Class-Struct-0.68-515.el10_2.noarch             41/98 
+  Installing       : perl-Term-ANSIColor-5.01-512.el10.noarch             42/98 
+  Installing       : perl-POSIX-2.20-515.el10_2.aarch64                   43/98 
+  Installing       : perl-IPC-Open3-1.22-515.el10_2.noarch                44/98 
+  Installing       : perl-File-Temp-1:0.231.100-512.el10.noarch           45/98 
+  Installing       : perl-Term-Cap-1.18-511.el10.noarch                   46/98 
+  Installing       : perl-Pod-Simple-1:3.45-511.el10.noarch               47/98 
+  Installing       : perl-HTTP-Tiny-0.088-512.el10.noarch                 48/98 
+  Installing       : perl-Socket-4:2.038-511.el10.aarch64                 49/98 
+  Installing       : perl-SelectSaver-1.02-515.el10_2.noarch              50/98 
+  Installing       : perl-Symbol-1.09-515.el10_2.noarch                   51/98 
+  Installing       : perl-File-stat-1.14-515.el10_2.noarch                52/98 
+  Installing       : perl-podlators-1:5.01-511.el10.noarch                53/98 
+  Installing       : perl-Pod-Perldoc-3.28.01-512.el10.noarch             54/98 
+  Installing       : perl-Fcntl-1.18-515.el10_2.aarch64                   55/98 
+  Installing       : perl-Text-ParseWords-3.31-511.el10.noarch            56/98 
+  Installing       : perl-base-2.27-515.el10_2.noarch                     57/98 
+  Installing       : perl-mro-1.29-515.el10_2.aarch64                     58/98 
+  Installing       : perl-IO-1.55-515.el10_2.aarch64                      59/98 
+  Installing       : perl-overloading-0.02-515.el10_2.noarch              60/98 
+  Installing       : perl-Pod-Usage-4:2.03-511.el10.noarch                61/98 
+  Installing       : perl-Errno-1.38-515.el10_2.aarch64                   62/98 
+  Installing       : perl-File-Basename-2.86-515.el10_2.noarch            63/98 
+  Installing       : perl-Getopt-Std-1.14-515.el10_2.noarch               64/98 
+  Installing       : perl-MIME-Base64-3.16-511.el10.aarch64               65/98 
+  Installing       : perl-Scalar-List-Utils-5:1.63-511.el10.aarch64       66/98 
+  Installing       : perl-constant-1.33-512.el10.noarch                   67/98 
+  Installing       : perl-Storable-1:3.32-511.el10.aarch64                68/98 
+  Installing       : perl-overload-1.37-515.el10_2.noarch                 69/98 
+  Installing       : perl-parent-1:0.241-512.el10.noarch                  70/98 
+  Installing       : perl-vars-1.05-515.el10_2.noarch                     71/98 
+  Installing       : perl-Getopt-Long-1:2.58-3.el10.noarch                72/98 
+  Installing       : perl-Carp-1.54-511.el10.noarch                       73/98 
+  Installing       : perl-Exporter-5.78-511.el10.noarch                   74/98 
+  Installing       : perl-NDBM_File-1.17-515.el10_2.aarch64               75/98 
+  Installing       : perl-PathTools-3.91-512.el10.aarch64                 76/98 
+  Installing       : perl-DynaLoader-1.56-515.el10_2.aarch64              77/98 
+  Installing       : perl-Encode-4:3.21-511.el10.aarch64                  78/98 
+  Installing       : perl-libs-4:5.40.2-515.el10_2.aarch64                79/98 
+  Installing       : perl-interpreter-4:5.40.2-515.el10_2.aarch64         80/98 
+  Installing       : gobject-introspection-1.79.1-6.el10.aarch64          81/98 
+  Installing       : python3-gobject-base-noarch-3.46.0-7.el10.noarch     82/98 
+  Installing       : python3-gobject-base-3.46.0-7.el10.aarch64           83/98 
+  Installing       : python3-firewall-2.4.3-4.el10_2.noarch               84/98 
+  Installing       : firewalld-filesystem-2.4.3-4.el10_2.noarch           85/98 
+  Installing       : emacs-filesystem-1:29.4-13.el10_2.noarch             86/98 
+  Installing       : libidn-1.42-4.el10_0.aarch64                         87/98 
+  Installing       : libgsasl-1.10.0-17.el10_2.aarch64                    88/98 
+  Installing       : diffutils-3.10-8.el10.aarch64                        89/98 
+  Installing       : policycoreutils-3.10-2.el10_2.aarch64                90/98 
+  Running scriptlet: policycoreutils-3.10-2.el10_2.aarch64                90/98 
+Created symlink '/etc/systemd/system/sysinit.target.wants/selinux-autorelabel-mark.service' → '/usr/lib/systemd/system/selinux-autorelabel-mark.service'.
+
+  Installing       : publicsuffix-list-20240107-5.el10.noarch             91/98 
+  Running scriptlet: exim-4.99.1-1.el10_2.aarch64                         92/98 
+  Installing       : exim-4.99.1-1.el10_2.aarch64                         92/98 
+warning: user exim does not exist - using root
+warning: group exim does not exist - using root
+warning: user exim does not exist - using root
+warning: group exim does not exist - using root
+warning: user exim does not exist - using root
+warning: group exim does not exist - using root
+warning: user exim does not exist - using root
+warning: group exim does not exist - using root
+warning: user exim does not exist - using root
+warning: group exim does not exist - using root
+
+  Running scriptlet: exim-4.99.1-1.el10_2.aarch64                         92/98 
+  Installing       : fail2ban-sendmail-1.1.0-6.el10_0.noarch              93/98 
+  Installing       : libcap-ng-python3-0.8.4-6.el10.aarch64               94/98 
+  Installing       : firewalld-2.4.3-4.el10_2.noarch                      95/98 
+  Running scriptlet: firewalld-2.4.3-4.el10_2.noarch                      95/98 
+Created symlink '/etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service' → '/usr/lib/systemd/system/firewalld.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/firewalld.service' → '/usr/lib/systemd/system/firewalld.service'.
+
+  Installing       : fail2ban-firewalld-1.1.0-6.el10_0.noarch             96/98 
+  Installing       : fail2ban-1.1.0-6.el10_0.noarch                       97/98 
+  Running scriptlet: openssh-server-9.9p1-28.el10_2.alma.1.aarch64        98/98 
+  Installing       : openssh-server-9.9p1-28.el10_2.alma.1.aarch64        98/98 
+  Running scriptlet: openssh-server-9.9p1-28.el10_2.alma.1.aarch64        98/98 
+Created symlink '/etc/systemd/system/multi-user.target.wants/sshd.service' → '/usr/lib/systemd/system/sshd.service'.
+
+Creating group 'exim' with GID 93.
+Creating user 'exim' (n/a) with UID 93 and GID 93.
+
+Failed to parse conditionalized execute bit for "/run/log/journal/f09c613db7674ccea5d3824a1e6e8245/system.journal": Operation not supported
+
+
+Installed:
+  diffutils-3.10-8.el10.aarch64                                                 
+  emacs-filesystem-1:29.4-13.el10_2.noarch                                      
+  exim-4.99.1-1.el10_2.aarch64                                                  
+  fail2ban-1.1.0-6.el10_0.noarch                                                
+  fail2ban-firewalld-1.1.0-6.el10_0.noarch                                      
+  fail2ban-sendmail-1.1.0-6.el10_0.noarch                                       
+  fail2ban-server-1.1.0-6.el10_0.noarch                                         
+  firewalld-2.4.3-4.el10_2.noarch                                               
+  firewalld-filesystem-2.4.3-4.el10_2.noarch                                    
+  gobject-introspection-1.79.1-6.el10.aarch64                                   
+  groff-base-1.23.0-10.el10.aarch64                                             
+  ipset-7.22-13.el10_2.aarch64                                                  
+  ipset-libs-7.22-13.el10_2.aarch64                                             
+  iptables-libs-1.8.11-16.el10_2.aarch64                                        
+  iptables-nft-1.8.11-16.el10_2.aarch64                                         
+  jansson-2.14-3.el10.aarch64                                                   
+  libcap-ng-python3-0.8.4-6.el10.aarch64                                        
+  libdb-5.3.28-64.el10_0.aarch64                                                
+  libgsasl-1.10.0-17.el10_2.aarch64                                             
+  libidn-1.42-4.el10_0.aarch64                                                  
+  libmnl-1.0.5-7.el10.aarch64                                                   
+  libnetfilter_conntrack-1.0.9-12.el10.aarch64                                  
+  libnfnetlink-1.0.2-3.el10.aarch64                                             
+  libnftnl-1.3.0-3.el10.aarch64                                                 
+  libnsl2-2.0.1-1.el10_0.aarch64                                                
+  libntlm-1.8-1.el10_0.aarch64                                                  
+  libopendmarc-1.4.2-33.el10_2.aarch64                                          
+  libselinux-utils-3.10-1.el10.aarch64                                          
+  libspf2-1.2.11-16.20210922git4915c308.el10_0.aarch64                          
+  libtirpc-1.3.5-1.el10.aarch64                                                 
+  ncurses-6.4-15.20240127.el10_1.aarch64                                        
+  nftables-1:1.1.5-6.el10_2.aarch64                                             
+  openssh-9.9p1-28.el10_2.alma.1.aarch64                                        
+  openssh-server-9.9p1-28.el10_2.alma.1.aarch64                                 
+  perl-AutoLoader-5.74-515.el10_2.noarch                                        
+  perl-B-1.89-515.el10_2.aarch64                                                
+  perl-Carp-1.54-511.el10.noarch                                                
+  perl-Class-Struct-0.68-515.el10_2.noarch                                      
+  perl-Data-Dumper-2.189-512.el10.aarch64                                       
+  perl-Digest-1.20-511.el10.noarch                                              
+  perl-Digest-MD5-2.59-6.el10.aarch64                                           
+  perl-DynaLoader-1.56-515.el10_2.aarch64                                       
+  perl-Encode-4:3.21-511.el10.aarch64                                           
+  perl-Errno-1.38-515.el10_2.aarch64                                            
+  perl-Exporter-5.78-511.el10.noarch                                            
+  perl-Fcntl-1.18-515.el10_2.aarch64                                            
+  perl-File-Basename-2.86-515.el10_2.noarch                                     
+  perl-File-Path-2.18-512.el10.noarch                                           
+  perl-File-Temp-1:0.231.100-512.el10.noarch                                    
+  perl-File-stat-1.14-515.el10_2.noarch                                         
+  perl-FileHandle-2.05-515.el10_2.noarch                                        
+  perl-Getopt-Long-1:2.58-3.el10.noarch                                         
+  perl-Getopt-Std-1.14-515.el10_2.noarch                                        
+  perl-HTTP-Tiny-0.088-512.el10.noarch                                          
+  perl-IO-1.55-515.el10_2.aarch64                                               
+  perl-IO-Socket-IP-0.42-512.el10.noarch                                        
+  perl-IO-Socket-SSL-2.085-3.el10.noarch                                        
+  perl-IPC-Open3-1.22-515.el10_2.noarch                                         
+  perl-MIME-Base64-3.16-511.el10.aarch64                                        
+  perl-Mozilla-CA-20231213-5.el10.noarch                                        
+  perl-NDBM_File-1.17-515.el10_2.aarch64                                        
+  perl-Net-SSLeay-1.94-8.el10.aarch64                                           
+  perl-POSIX-2.20-515.el10_2.aarch64                                            
+  perl-PathTools-3.91-512.el10.aarch64                                          
+  perl-Pod-Escapes-1:1.07-511.el10.noarch                                       
+  perl-Pod-Perldoc-3.28.01-512.el10.noarch                                      
+  perl-Pod-Simple-1:3.45-511.el10.noarch                                        
+  perl-Pod-Usage-4:2.03-511.el10.noarch                                         
+  perl-Scalar-List-Utils-5:1.63-511.el10.aarch64                                
+  perl-SelectSaver-1.02-515.el10_2.noarch                                       
+  perl-Socket-4:2.038-511.el10.aarch64                                          
+  perl-Storable-1:3.32-511.el10.aarch64                                         
+  perl-Symbol-1.09-515.el10_2.noarch                                            
+  perl-Term-ANSIColor-5.01-512.el10.noarch                                      
+  perl-Term-Cap-1.18-511.el10.noarch                                            
+  perl-Text-ParseWords-3.31-511.el10.noarch                                     
+  perl-Text-Tabs+Wrap-2024.001-511.el10.noarch                                  
+  perl-Time-Local-2:1.350-511.el10.noarch                                       
+  perl-URI-5.27-3.el10.noarch                                                   
+  perl-base-2.27-515.el10_2.noarch                                              
+  perl-constant-1.33-512.el10.noarch                                            
+  perl-if-0.61.000-515.el10_2.noarch                                            
+  perl-interpreter-4:5.40.2-515.el10_2.aarch64                                  
+  perl-libnet-3.15-512.el10.noarch                                              
+  perl-libs-4:5.40.2-515.el10_2.aarch64                                         
+  perl-locale-1.12-515.el10_2.noarch                                            
+  perl-mro-1.29-515.el10_2.aarch64                                              
+  perl-overload-1.37-515.el10_2.noarch                                          
+  perl-overloading-0.02-515.el10_2.noarch                                       
+  perl-parent-1:0.241-512.el10.noarch                                           
+  perl-podlators-1:5.01-511.el10.noarch                                         
+  perl-vars-1.05-515.el10_2.noarch                                              
+  policycoreutils-3.10-2.el10_2.aarch64                                         
+  publicsuffix-list-20240107-5.el10.noarch                                      
+  python3-firewall-2.4.3-4.el10_2.noarch                                        
+  python3-gobject-base-3.46.0-7.el10.aarch64                                    
+  python3-gobject-base-noarch-3.46.0-7.el10.noarch                              
+  python3-nftables-1:1.1.5-6.el10_2.aarch64                                     
+
+Complete!
++ systemctl enable --now sshd
++ tee /etc/fail2ban/jail.local
++ systemctl enable --now fail2ban
+Created symlink '/etc/systemd/system/multi-user.target.wants/fail2ban.service' → '/usr/lib/systemd/system/fail2ban.service'.
++ sleep 3
++ echo '=== fail2ban-client status sshd ==='
+=== fail2ban-client status sshd ===
++ fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd + _COMM=sshd-session
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
++ echo '=== manual test ban ==='
++ fail2ban-client set sshd banip 203.0.113.42
+=== manual test ban ===
+1
++ sleep 2
++ echo '=== nft list table inet f2b-table ==='
++ nft list table inet f2b-table
+=== nft list table inet f2b-table ===
+table inet f2b-table {
+	set addr-set-sshd {
+		type ipv4_addr
+		elements = { 203.0.113.42 }
+	}
+
+	chain f2b-chain {
+		type filter hook input priority filter - 1; policy accept;
+		tcp dport 22 ip saddr @addr-set-sshd reject with icmp port-unreachable
+	}
+}
++ nft list table inet f2b-table
++ grep -q 203.0.113.42
++ fail2ban-client get sshd banned
+['203.0.113.42']
+=== unban ===
++ echo '=== unban ==='
++ fail2ban-client set sshd unbanip 203.0.113.42
+1
++ sleep 1
++ nft list table inet f2b-table
++ grep -q 203.0.113.42
++ fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd + _COMM=sshd-session
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:	
+RECIPE OK
++ echo 'RECIPE OK'
+# exit status: 0

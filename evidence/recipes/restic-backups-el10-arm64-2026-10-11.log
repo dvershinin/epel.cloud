@@ -4,3 +4,208 @@ AlmaLinux release 10.2 (Lavender Lion)
 # ---
 + dnf -y install epel-release
 AlmaLinux 10 - AppStream                        705 kB/s | 2.7 MB     00:03    
+AlmaLinux 10 - BaseOS                           379 kB/s |  65 MB     02:55    
+AlmaLinux 10 - CRB                              318 kB/s | 629 kB     00:01    
+AlmaLinux 10 - Extras                            18 kB/s |  13 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                    Arch      Version                    Repo      Size
+================================================================================
+Installing:
+ epel-release               noarch    10-6.el10                  extras    18 k
+Installing dependencies:
+ dbus-libs                  aarch64   1:1.14.10-5.el10           baseos   155 k
+ python3-dateutil           noarch    1:2.9.0.post0-1.el10_0     baseos   327 k
+ python3-dbus               aarch64   1.3.2-8.el10               baseos   159 k
+ python3-dnf-plugins-core   noarch    4.7.0-10.el10              baseos   294 k
+ python3-six                noarch    1.16.0-16.el10             baseos    41 k
+ python3-systemd            aarch64   235-11.el10                baseos   107 k
+Installing weak dependencies:
+ dnf-plugins-core           noarch    4.7.0-10.el10              baseos    37 k
+
+Transaction Summary
+================================================================================
+Install  8 Packages
+
+Total download size: 1.1 M
+Installed size: 3.7 M
+Downloading Packages:
+(1/8): dnf-plugins-core-4.7.0-10.el10.noarch.rp 930 kB/s |  37 kB     00:00    
+(2/8): dbus-libs-1.14.10-5.el10.aarch64.rpm     1.0 MB/s | 155 kB     00:00    
+(3/8): python3-dbus-1.3.2-8.el10.aarch64.rpm    932 kB/s | 159 kB     00:00    
+(4/8): python3-six-1.16.0-16.el10.noarch.rpm    4.5 MB/s |  41 kB     00:00    
+(5/8): python3-systemd-235-11.el10.aarch64.rpm  9.1 MB/s | 107 kB     00:00    
+(6/8): epel-release-10-6.el10.noarch.rpm        1.5 MB/s |  18 kB     00:00    
+(7/8): python3-dateutil-2.9.0.post0-1.el10_0.no 969 kB/s | 327 kB     00:00    
+(8/8): python3-dnf-plugins-core-4.7.0-10.el10.n 1.2 MB/s | 294 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           606 kB/s | 1.1 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-235-11.el10.aarch64                    1/8 
+  Installing       : python3-six-1.16.0-16.el10.noarch                      2/8 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el10_0.noarch         3/8 
+  Installing       : dbus-libs-1:1.14.10-5.el10.aarch64                     4/8 
+  Installing       : python3-dbus-1.3.2-8.el10.aarch64                      5/8 
+  Installing       : python3-dnf-plugins-core-4.7.0-10.el10.noarch          6/8 
+  Installing       : dnf-plugins-core-4.7.0-10.el10.noarch                  7/8 
+  Installing       : epel-release-10-6.el10.noarch                          8/8 
+  Running scriptlet: epel-release-10-6.el10.noarch                          8/8 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+
+Installed:
+  dbus-libs-1:1.14.10-5.el10.aarch64                                            
+  dnf-plugins-core-4.7.0-10.el10.noarch                                         
+  epel-release-10-6.el10.noarch                                                 
+  python3-dateutil-1:2.9.0.post0-1.el10_0.noarch                                
+  python3-dbus-1.3.2-8.el10.aarch64                                             
+  python3-dnf-plugins-core-4.7.0-10.el10.noarch                                 
+  python3-six-1.16.0-16.el10.noarch                                             
+  python3-systemd-235-11.el10.aarch64                                           
+
+Complete!
++ dnf -y install restic
+Extra Packages for Enterprise Linux 10 - aarch6 2.5 MB/s | 6.6 MB     00:02    
+Last metadata expiration check: 0:00:01 ago on Sun Oct 11 10:29:56 2026.
+Dependencies resolved.
+================================================================================
+ Package            Architecture   Version                  Repository     Size
+================================================================================
+Installing:
+ restic             aarch64        0.19.1-1.el10_2          epel           12 M
+Installing dependencies:
+ fuse-common        aarch64        3.16.2-5.el10            baseos        7.5 k
+Installing weak dependencies:
+ fuse               aarch64        2.9.9-25.el10            baseos         79 k
+
+Transaction Summary
+================================================================================
+Install  3 Packages
+
+Total download size: 12 M
+Installed size: 44 M
+Downloading Packages:
+(1/3): fuse-common-3.16.2-5.el10.aarch64.rpm    139 kB/s | 7.5 kB     00:00    
+(2/3): fuse-2.9.9-25.el10.aarch64.rpm           468 kB/s |  79 kB     00:00    
+(3/3): restic-0.19.1-1.el10_2.aarch64.rpm       5.5 MB/s |  12 MB     00:02    
+--------------------------------------------------------------------------------
+Total                                           3.0 MB/s |  12 MB     00:04     
+Extra Packages for Enterprise Linux 10 - aarch6 1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0xE37ED158:
+ Userid     : "Fedora (epel10) <epel@fedoraproject.org>"
+ Fingerprint: 7D8D 15CB FC4E 6268 8591 FB26 33D9 8517 E37E D158
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-10
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : fuse-common-3.16.2-5.el10.aarch64                      1/3 
+  Installing       : fuse-2.9.9-25.el10.aarch64                             2/3 
+  Installing       : restic-0.19.1-1.el10_2.aarch64                         3/3 
+  Running scriptlet: restic-0.19.1-1.el10_2.aarch64                         3/3 
+
+Installed:
+  fuse-2.9.9-25.el10.aarch64            fuse-common-3.16.2-5.el10.aarch64       
+  restic-0.19.1-1.el10_2.aarch64       
+
+Complete!
++ echo '=== 2. create the repository ==='
++ install -d -m 700 /etc/restic
+=== 2. create the repository ===
++ sh -c 'head -c 32 /dev/urandom | base64 > /etc/restic/password'
++ chmod 600 /etc/restic/password
++ mkdir -p /backup/restic
++ restic -r /backup/restic --password-file /etc/restic/password init
+created restic repository ee5ff7d4ed at /backup/restic
+
+Please note that knowledge of your password is required to access
+the repository. Losing your password means that your data is
+irrecoverably lost.
++ echo '=== 3. first backup ==='
+=== 3. first backup ===
++ mkdir -p /srv
++ restic -r /backup/restic --password-file /etc/restic/password backup /etc /srv /var/lib --exclude /var/lib/dnf --exclude-caches
+no parent snapshot found, will read all files
+
+Files:         310 new,     0 changed,     0 unmodified
+Dirs:          131 new,     0 changed,     0 unmodified
+Added to the repository: 3.409 MiB (1.541 MiB stored)
+
+processed 310 files, 3.065 MiB in 0:00
+snapshot c34e9962 saved
++ echo '=== 4. timer ==='
++ tee /etc/systemd/system/restic-backup.service
+=== 4. timer ===
++ tee /etc/systemd/system/restic-backup.timer
++ systemctl daemon-reload
++ systemctl enable --now restic-backup.timer
+Created symlink '/etc/systemd/system/timers.target.wants/restic-backup.timer' → '/etc/systemd/system/restic-backup.timer'.
++ systemctl list-timers restic-backup.timer --no-pager
+NEXT                        LEFT LAST PASSED UNIT                ACTIVATES
+Mon 2026-10-12 03:57:17 UTC  17h -         - restic-backup.timer restic-backup.service
+
+1 timers listed.
+Pass --all to see loaded but inactive timers, too.
++ echo '=== timer service actually runs ==='
++ systemctl start restic-backup.service
+=== timer service actually runs ===
++ tail -5
++ systemctl status restic-backup.service --no-pager -l
+Oct 11 10:30:08 737f9cf955e6 restic[211]: -----------------------------------------------------------------------------------------------------
+Oct 11 10:30:08 737f9cf955e6 restic[211]: Timestamps shown in local time
+Oct 11 10:30:08 737f9cf955e6 restic[211]: 2 snapshots
+Oct 11 10:30:08 737f9cf955e6 systemd[1]: restic-backup.service: Deactivated successfully.
+Oct 11 10:30:08 737f9cf955e6 systemd[1]: Finished restic-backup.service - restic backup.
++ true
++ echo '=== verify: restore and compare ==='
++ restic -r /backup/restic --password-file /etc/restic/password snapshots
+=== verify: restore and compare ===
+ID        Time                 Host          Tags        Paths     Size
+----------------------------------------------------------------------------
+c34e9962  2026-10-11 10:30:05  737f9cf955e6              /etc      3.065 MiB
+                                                         /srv
+                                                         /var/lib
+
+2eacf8d1  2026-10-11 10:30:06  737f9cf955e6              /etc      3.066 MiB
+                                                         /srv
+                                                         /var/lib
+----------------------------------------------------------------------------
+Timestamps shown in local time
+2 snapshots
++ restic -r /backup/restic --password-file /etc/restic/password restore latest --target /tmp/restore-test --include /etc/hostname
+restoring snapshot 2eacf8d1 of [/etc /srv /var/lib] at 2026-10-11 10:30:06.668083294 +0000 UTC by root@737f9cf955e6 to /tmp/restore-test
+Summary: Restored 2 / 1 files/dirs (13 B / 13 B) in 0:00
++ sha256sum /etc/hostname /tmp/restore-test/etc/hostname
+4c048b7482e0487caf7cb82e572b3d1eaad5c29e90a39c070bdb84e88f738233  /etc/hostname
+4c048b7482e0487caf7cb82e572b3d1eaad5c29e90a39c070bdb84e88f738233  /tmp/restore-test/etc/hostname
+++ sha256sum /etc/hostname
+++ awk '{print $1}'
++ A=4c048b7482e0487caf7cb82e572b3d1eaad5c29e90a39c070bdb84e88f738233
+++ sha256sum /tmp/restore-test/etc/hostname
+++ awk '{print $1}'
++ B=4c048b7482e0487caf7cb82e572b3d1eaad5c29e90a39c070bdb84e88f738233
++ '[' 4c048b7482e0487caf7cb82e572b3d1eaad5c29e90a39c070bdb84e88f738233 = 4c048b7482e0487caf7cb82e572b3d1eaad5c29e90a39c070bdb84e88f738233 ']'
++ echo '=== repository check ==='
++ restic -r /backup/restic --password-file /etc/restic/password check
+=== repository check ===
+using temporary cache in /tmp/restic-check-cache-4209727671
+create exclusive lock for repository
+load indexes
+check all packs
+check snapshots, trees and blobs
+[0:00] 100.00%  2 / 2 snapshots
+no errors were found
++ restic -r /backup/restic --password-file /etc/restic/password check
++ grep -q 'no errors were found'
++ echo 'RECIPE OK'
+RECIPE OK
+# exit status: 0

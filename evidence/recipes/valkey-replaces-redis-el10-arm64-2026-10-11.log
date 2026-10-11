@@ -33,3 +33,64 @@ Total download size: 1.6 M
 Installed size: 5.3 M
 Downloading Packages:
 (1/2): logrotate-3.22.0-5.el10.aarch64.rpm      433 kB/s |  74 kB     00:00    
+(2/2): valkey-8.0.11-1.el10_2.aarch64.rpm       691 kB/s | 1.6 MB     00:02    
+--------------------------------------------------------------------------------
+Total                                           448 kB/s | 1.6 MB     00:03     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Running scriptlet: logrotate-3.22.0-5.el10.aarch64                        1/2 
+  Installing       : logrotate-3.22.0-5.el10.aarch64                        1/2 
+  Running scriptlet: logrotate-3.22.0-5.el10.aarch64                        1/2 
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+
+  Running scriptlet: valkey-8.0.11-1.el10_2.aarch64                         2/2 
+  Installing       : valkey-8.0.11-1.el10_2.aarch64                         2/2 
+  Running scriptlet: valkey-8.0.11-1.el10_2.aarch64                         2/2 
+Failed to parse conditionalized execute bit for "/run/log/journal/203484572cc843068ee2b03b6d0a6647/system.journal": Operation not supported
+
+
+Installed:
+  logrotate-3.22.0-5.el10.aarch64         valkey-8.0.11-1.el10_2.aarch64        
+
+Complete!
+=== 2. configure (append; last directive wins) ===
++ echo '=== 2. configure (append; last directive wins) ==='
++ tee -a /etc/valkey/valkey.conf
+=== 4. start valkey ===
++ '[' 0 = 1 ']'
++ echo '=== 4. start valkey ==='
++ systemctl enable --now valkey
+Created symlink '/etc/systemd/system/multi-user.target.wants/valkey.service' → '/usr/lib/systemd/system/valkey.service'.
++ echo '=== verify ==='
++ valkey-cli ping
+=== verify ===
+PONG
++ valkey-cli set cookbook:test epel.cloud
+OK
++ valkey-cli get cookbook:test
+epel.cloud
++ '[' 0 = 1 ']'
++ echo '=== persistence across restart ==='
+=== persistence across restart ===
++ systemctl restart valkey
++ sleep 2
++ valkey-cli get cookbook:test
+epel.cloud
++ valkey-cli get cookbook:test
++ grep -q epel.cloud
++ valkey-cli dbsize
+1
++ echo '=== config tuning honored ==='
+=== config tuning honored ===
++ valkey-cli config get maxmemory-policy
+maxmemory-policy
+allkeys-lru
++ valkey-cli config get maxmemory-policy
++ grep -q allkeys-lru
++ echo 'RECIPE OK'
+RECIPE OK
+# exit status: 0

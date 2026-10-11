@@ -6,3 +6,192 @@ AlmaLinux release 10.2 (Lavender Lion)
 + dnf -y install epel-release
 === install nginx + EPEL brotli module ===
 AlmaLinux 10 - AppStream                        677 kB/s | 2.7 MB     00:04    
+AlmaLinux 10 - BaseOS                           375 kB/s |  65 MB     02:57    
+AlmaLinux 10 - CRB                              439 kB/s | 629 kB     00:01    
+AlmaLinux 10 - Extras                            16 kB/s |  13 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                    Arch      Version                    Repo      Size
+================================================================================
+Installing:
+ epel-release               noarch    10-6.el10                  extras    18 k
+Installing dependencies:
+ dbus-libs                  aarch64   1:1.14.10-5.el10           baseos   155 k
+ python3-dateutil           noarch    1:2.9.0.post0-1.el10_0     baseos   327 k
+ python3-dbus               aarch64   1.3.2-8.el10               baseos   159 k
+ python3-dnf-plugins-core   noarch    4.7.0-10.el10              baseos   294 k
+ python3-six                noarch    1.16.0-16.el10             baseos    41 k
+ python3-systemd            aarch64   235-11.el10                baseos   107 k
+Installing weak dependencies:
+ dnf-plugins-core           noarch    4.7.0-10.el10              baseos    37 k
+
+Transaction Summary
+================================================================================
+Install  8 Packages
+
+Total download size: 1.1 M
+Installed size: 3.7 M
+Downloading Packages:
+(1/8): dnf-plugins-core-4.7.0-10.el10.noarch.rp 1.1 MB/s |  37 kB     00:00    
+(2/8): dbus-libs-1.14.10-5.el10.aarch64.rpm     1.1 MB/s | 155 kB     00:00    
+(3/8): python3-dbus-1.3.2-8.el10.aarch64.rpm    977 kB/s | 159 kB     00:00    
+(4/8): python3-six-1.16.0-16.el10.noarch.rpm    3.7 MB/s |  41 kB     00:00    
+(5/8): python3-systemd-235-11.el10.aarch64.rpm  8.2 MB/s | 107 kB     00:00    
+(6/8): epel-release-10-6.el10.noarch.rpm        1.9 MB/s |  18 kB     00:00    
+(7/8): python3-dateutil-2.9.0.post0-1.el10_0.no 995 kB/s | 327 kB     00:00    
+(8/8): python3-dnf-plugins-core-4.7.0-10.el10.n 1.0 MB/s | 294 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           597 kB/s | 1.1 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-235-11.el10.aarch64                    1/8 
+  Installing       : python3-six-1.16.0-16.el10.noarch                      2/8 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el10_0.noarch         3/8 
+  Installing       : dbus-libs-1:1.14.10-5.el10.aarch64                     4/8 
+  Installing       : python3-dbus-1.3.2-8.el10.aarch64                      5/8 
+  Installing       : python3-dnf-plugins-core-4.7.0-10.el10.noarch          6/8 
+  Installing       : dnf-plugins-core-4.7.0-10.el10.noarch                  7/8 
+  Installing       : epel-release-10-6.el10.noarch                          8/8 
+  Running scriptlet: epel-release-10-6.el10.noarch                          8/8 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+
+Installed:
+  dbus-libs-1:1.14.10-5.el10.aarch64                                            
+  dnf-plugins-core-4.7.0-10.el10.noarch                                         
+  epel-release-10-6.el10.noarch                                                 
+  python3-dateutil-1:2.9.0.post0-1.el10_0.noarch                                
+  python3-dbus-1.3.2-8.el10.aarch64                                             
+  python3-dnf-plugins-core-4.7.0-10.el10.noarch                                 
+  python3-six-1.16.0-16.el10.noarch                                             
+  python3-systemd-235-11.el10.aarch64                                           
+
+Complete!
++ dnf -y install nginx nginx-mod-brotli
+Extra Packages for Enterprise Linux 10 - aarch6 2.7 MB/s | 6.6 MB     00:02    
+Last metadata expiration check: 0:00:02 ago on Sun Oct 11 10:29:57 2026.
+Dependencies resolved.
+================================================================================
+ Package                  Arch       Version                 Repository    Size
+================================================================================
+Installing:
+ nginx                    aarch64    2:1.26.3-6.el10_2.7     appstream     32 k
+ nginx-mod-brotli         aarch64    1.0.0~rc-1.el10_1       epel          22 k
+Installing dependencies:
+ almalinux-logos-httpd    noarch     100.4-1.el10_2          appstream     18 k
+ libbrotli                aarch64    1.1.0-8.el10_2          baseos       344 k
+ nginx-core               aarch64    2:1.26.3-6.el10_2.7     appstream    657 k
+ nginx-filesystem         noarch     2:1.26.3-6.el10_2.7     appstream     11 k
+Installing weak dependencies:
+ logrotate                aarch64    3.22.0-5.el10           baseos        74 k
+
+Transaction Summary
+================================================================================
+Install  7 Packages
+
+Total download size: 1.1 M
+Installed size: 3.1 M
+Downloading Packages:
+(1/7): almalinux-logos-httpd-100.4-1.el10_2.noa 486 kB/s |  18 kB     00:00    
+(2/7): nginx-filesystem-1.26.3-6.el10_2.7.noarc 927 kB/s |  11 kB     00:00    
+(3/7): nginx-1.26.3-6.el10_2.7.aarch64.rpm      555 kB/s |  32 kB     00:00    
+(4/7): logrotate-3.22.0-5.el10.aarch64.rpm      3.0 MB/s |  74 kB     00:00    
+(5/7): nginx-mod-brotli-1.0.0~rc-1.el10_1.aarch 380 kB/s |  22 kB     00:00    
+(6/7): libbrotli-1.1.0-8.el10_2.aarch64.rpm     976 kB/s | 344 kB     00:00    
+(7/7): nginx-core-1.26.3-6.el10_2.7.aarch64.rpm 623 kB/s | 657 kB     00:01    
+--------------------------------------------------------------------------------
+Total                                           321 kB/s | 1.1 MB     00:03     
+Extra Packages for Enterprise Linux 10 - aarch6 1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0xE37ED158:
+ Userid     : "Fedora (epel10) <epel@fedoraproject.org>"
+ Fingerprint: 7D8D 15CB FC4E 6268 8591 FB26 33D9 8517 E37E D158
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-10
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Running scriptlet: nginx-filesystem-2:1.26.3-6.el10_2.7.noarch            1/7 
+  Installing       : nginx-filesystem-2:1.26.3-6.el10_2.7.noarch            1/7 
+  Installing       : nginx-core-2:1.26.3-6.el10_2.7.aarch64                 2/7 
+  Running scriptlet: logrotate-3.22.0-5.el10.aarch64                        3/7 
+  Installing       : logrotate-3.22.0-5.el10.aarch64                        3/7 
+  Running scriptlet: logrotate-3.22.0-5.el10.aarch64                        3/7 
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+
+  Installing       : libbrotli-1.1.0-8.el10_2.aarch64                       4/7 
+  Installing       : almalinux-logos-httpd-100.4-1.el10_2.noarch            5/7 
+  Installing       : nginx-2:1.26.3-6.el10_2.7.aarch64                      6/7 
+  Running scriptlet: nginx-2:1.26.3-6.el10_2.7.aarch64                      6/7 
+  Installing       : nginx-mod-brotli-1.0.0~rc-1.el10_1.aarch64             7/7 
+  Running scriptlet: nginx-mod-brotli-1.0.0~rc-1.el10_1.aarch64             7/7 
+Failed to parse conditionalized execute bit for "/run/log/journal/1ad57caa2a9a4c1e921764e3618f8a9f/system.journal": Operation not supported
+
+
+Installed:
+  almalinux-logos-httpd-100.4-1.el10_2.noarch                                   
+  libbrotli-1.1.0-8.el10_2.aarch64                                              
+  logrotate-3.22.0-5.el10.aarch64                                               
+  nginx-2:1.26.3-6.el10_2.7.aarch64                                             
+  nginx-core-2:1.26.3-6.el10_2.7.aarch64                                        
+  nginx-filesystem-2:1.26.3-6.el10_2.7.noarch                                   
+  nginx-mod-brotli-1.0.0~rc-1.el10_1.aarch64                                    
+
+Complete!
++ nginx -v
+nginx version: nginx/1.26.3
++ rpm -q nginx nginx-mod-brotli
+nginx-1.26.3-6.el10_2.7.aarch64
+nginx-mod-brotli-1.0.0~rc-1.el10_1.aarch64
++ echo '=== module files ==='
+=== module files ===
++ rpm -ql nginx-mod-brotli
+/usr/lib/.build-id
+/usr/lib/.build-id/13
+/usr/lib/.build-id/13/3658d171ef9976c9a93ee6afb3f9931f907fd9
+/usr/lib/.build-id/9d
+/usr/lib/.build-id/9d/fead1fcb48e358ad1ce4817bb962db413947af
+/usr/lib64/nginx/modules/ngx_http_brotli_filter_module.so
+/usr/lib64/nginx/modules/ngx_http_brotli_static_module.so
+/usr/share/doc/nginx-mod-brotli
+/usr/share/doc/nginx-mod-brotli/README.md
+/usr/share/licenses/nginx-mod-brotli
+/usr/share/licenses/nginx-mod-brotli/LICENSE
+/usr/share/nginx/modules/mod-brotli.conf
+=== configure ===
++ echo '=== configure ==='
++ tee /etc/nginx/conf.d/brotli.conf
++ echo '=== validate and start ==='
+=== validate and start ===
++ nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
++ systemctl enable --now nginx
+Created symlink '/etc/systemd/system/multi-user.target.wants/nginx.service' → '/usr/lib/systemd/system/nginx.service'.
++ sleep 2
++ echo '=== verify ==='
+=== verify ===
++ curl -sI -H 'Accept-Encoding: br' http://localhost/
++ grep -i content-encoding
+Content-Encoding: br
++ curl -sI -H 'Accept-Encoding: br' http://localhost/
++ grep -qi 'content-encoding: br'
++ curl -so /dev/null -w '%{size_download} bytes (br)\n' -H 'Accept-Encoding: br' http://localhost/
+1796 bytes (br)
++ curl -so /dev/null -w '%{size_download} bytes (plain)\n' http://localhost/
+5760 bytes (plain)
+++ curl -so /dev/null -w '%{size_download}' -H 'Accept-Encoding: br' http://localhost/
++ BR=1796
+++ curl -so /dev/null -w '%{size_download}' http://localhost/
++ PLAIN=5760
++ '[' 1796 -lt 5760 ']'
++ echo 'RECIPE OK'
+RECIPE OK
+# exit status: 0

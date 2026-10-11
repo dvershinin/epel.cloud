@@ -1,1 +1,7 @@
 nginx-brotli: exit 0
+valkey-replaces-redis: exit 0
+clamav-upload-scanning: exit 0
+fail2ban-ssh: exit 0
+mirror: exit 0
+nginx-brotli-epel: exit 0
+restic-backups: exit 0
