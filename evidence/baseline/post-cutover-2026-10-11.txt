@@ -1,0 +1,41 @@
+== 1. root serves cookbook HTML:
+<!doctype html>
+<html lang="en">
+<head>
+== title:
+<title>302 Found</title>
+== 2. repomd 8/9/10:
+200 1183B 8/Everything/x86_64
+200 1182B 9/Everything/x86_64
+200 1190B 9/Everything/aarch64
+200 1184B 10/Everything/x86_64
+== 3. EPEL7 redirect:
+301 -> https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/repodata/repomd.xml
+== 4. Range + sha256:
+HTTP/2 206 
+content-range: bytes 0-1023/476574
+post-cutover sha256: 758c9dcf4a86b0b5266ce887a6c040632a3e3c52e2366b7d70880d91f936e2a7
+baseline sha256: 758c9dcf4a86b0b5266ce887a6c040632a3e3c52e2366b7d70880d91f936e2a7
+== 5. nonexistent mirror object stays a genuine error (not HTML, not cached):
+404 cache={"date":["Sun, 11 Oct 2026 11:39:19 GMT"],
+"content-type":["text/html; charset=iso-8859-1"],
+"server":["cloudf
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head>
+== 6. archive/vault/www:
+archive: 200
+vault: 200
+<!doctype html><html lang="en"><head><title>Making sure you&#39;re not a bot!</t
+== 7. query-bearing website URL:
+<title>Use the mirror — epel.cloud</title>
+== 8. robots/sitemap/favicon:
+User-agent: *
+Disallow: /pub/
+
+Sitemap: https://epel.cloud/sitemap.xml
+sitemap: 200
+favicon: 404
+== 9. recipe page + 404 behavior on website paths:
+recipe: 200

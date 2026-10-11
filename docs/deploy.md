@@ -1,8 +1,15 @@
 # Deployment: serving the cookbook at epel.cloud without touching the mirror
 
-Status: **prepared, not executed**. Attaching Worker routes to the live zone is
-a production change and needs Daniel's explicit approval. Everything up to and
-including the Pages preview deploy is safe and reversible.
+Status: **EXECUTED 2026-10-11** on Daniel's approval. Worker `epel-cloud-site`
+(version 53671cd8) live with routes `epel.cloud/pub/*` → no script
+(id `db0896c16b0f41efa13f898c41f01375`) and `epel.cloud/*` → worker
+(id `22a3dc8ad1ba4a9d84aef13374608ce9`); workers.dev subdomain disabled for the
+script. Only `/`, `/robots.txt`, `/sitemap.xml`, `/favicon.ico` were purged.
+Post-cutover checklist passed (see `evidence/baseline/post-cutover-2026-10-11.txt`);
+GSC domain property `sc-domain:epel.cloud` verified (TXT record
+`ac5789a29be74089f07b37b236646c6e`, added ALONGSIDE the SPF TXT — never
+upsert over it) and `https://epel.cloud/sitemap.xml` submitted. Rollback
+remains: delete the two routes.
 
 ## Topology
 
