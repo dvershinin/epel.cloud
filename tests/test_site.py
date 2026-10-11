@@ -77,7 +77,7 @@ def scan(path: Path) -> PageScanner:
 
 def test_expected_pages_exist(site: Path):
     for rel in ("index.html", "mirror.html", "recipes.html", "404.html",
-                "sitemap.xml", "robots.txt", "_headers"):
+                "sitemap.xml", "robots.txt", "_headers", "favicon.ico"):
         assert (site / rel).exists(), f"missing {rel}"
     recipes = list((site / "recipes").glob("*.html"))
     assert len(recipes) >= 5, "cookbook must ship at least five recipes"

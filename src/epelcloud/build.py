@@ -109,6 +109,11 @@ def hash_assets(out_dir: Path) -> dict[str, str]:
         if not path.is_file():
             continue
         rel = path.relative_to(static_dir)
+        if rel == Path("img/favicon.ico"):
+            # Browsers request /favicon.ico by fixed name; serve it unhashed
+            # at the site root instead of the hashed assets tree.
+            shutil.copyfile(path, out_dir / "favicon.ico")
+            continue
         digest = hashlib.sha256(path.read_bytes()).hexdigest()[:8]
         hashed_name = f"{path.stem}.{digest}{path.suffix}"
         target_rel = rel.parent / hashed_name
