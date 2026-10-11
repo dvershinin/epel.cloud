@@ -4,7 +4,7 @@ slug: clamav-upload-scanning
 description: Run the clamd scanning daemon from EPEL on EL 9/10, keep signatures fresh with freshclam, scan web upload directories on a timer, and verify detection with EICAR.
 updated: 2026-10-11
 last_tested: 2026-10-11
-tested_on: AlmaLinux 9.8 (systemd container, aarch64)
+tested_on: AlmaLinux 9.8 and 10.2 systemd containers (aarch64)
 releases: [EL 9, EL 10]
 arches: [x86_64, aarch64]
 time: 30 minutes

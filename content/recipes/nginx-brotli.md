@@ -4,7 +4,7 @@ slug: nginx-brotli
 description: Enable Brotli compression in NGINX on EL 9/10 with prebuilt RPMs - the in-distro EPEL module or GetPageSpeed's current-NGINX build - with measured size savings.
 updated: 2026-10-11
 last_tested: 2026-10-11
-tested_on: AlmaLinux 9.8 (systemd container, aarch64), both options
+tested_on: AlmaLinux 9.8 and 10.2 systemd containers (aarch64), both options
 releases: [EL 9, EL 10]
 arches: [x86_64, aarch64]
 time: 20 minutes

@@ -4,7 +4,7 @@ slug: valkey-replaces-redis
 description: Install Valkey from AppStream on AlmaLinux, Rocky Linux or RHEL 9/10, migrate an existing Redis dump, and verify persistence across restarts.
 updated: 2026-10-11
 last_tested: 2026-10-11
-tested_on: AlmaLinux 9.8 (systemd container, aarch64)
+tested_on: AlmaLinux 9.8 and 10.2 systemd containers (aarch64)
 releases: [EL 9, EL 10]
 arches: [x86_64, aarch64]
 time: 20 minutes
