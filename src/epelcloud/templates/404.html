@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Page not found — epel.cloud{% endblock %}
+{% block description %}This page does not exist on epel.cloud. The EPEL mirror lives under /pub/epel/ and the cookbook starts at the recipe index.{% endblock %}
+{% block content %}
+<header class="page-header">
+  <h1>404: not in this repository</h1>
+  <p class="lede">The page you asked for does not exist. If you were after packages,
+  the mirror lives under <code>/pub/epel/</code>; if you were after the cookbook,
+  start from the <a href="/recipes">recipe index</a> or the <a href="/">homepage</a>.</p>
+</header>
+{% endblock %}

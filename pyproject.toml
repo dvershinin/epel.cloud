@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epelcloud"
+version = "1.0.0"
+description = "Static site generator for the epel.cloud Enterprise Linux cookbook"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2>=3.1",
+    "markdown>=3.5",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+epelcloud = "epelcloud.build:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+epelcloud = ["templates/*.html", "static/css/*.css", "static/img/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

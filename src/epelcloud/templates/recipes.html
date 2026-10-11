@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Recipes — epel.cloud{% endblock %}
+{% block description %}Tested, reproducible recipes for Enterprise Linux servers: security, backups, caching and web serving on RHEL, AlmaLinux and Rocky Linux.{% endblock %}
+{% block content %}
+<header class="page-header">
+  <h1>Recipes</h1>
+  <p class="lede">Concrete server tasks on RHEL, AlmaLinux and Rocky Linux. Each recipe
+  lists its package ingredients, the releases it works on, and the date it was last
+  executed end to end in a clean environment.</p>
+</header>
+<div class="card-grid">
+  {% for recipe in recipes %}
+  {% with card_heading = 'h2' %}
+  {% include "partials/recipe_card.html" %}
+  {% endwith %}
+  {% endfor %}
+</div>
+{% endblock %}

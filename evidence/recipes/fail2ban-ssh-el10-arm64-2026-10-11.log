@@ -1,0 +1,6 @@
+# recipe test: fail2ban-ssh
+# image: almalinux/10-init  platform: linux/arm64  date: 2026-10-11T10:26:43Z
+AlmaLinux release 10.2 (Lavender Lion)
+# ---
++ dnf -y install epel-release
+AlmaLinux 10 - AppStream                        991 kB/s | 2.7 MB     00:02    

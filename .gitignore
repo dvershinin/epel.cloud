@@ -1,0 +1,8 @@
+site/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+evidence/recipes/.runner-*.out
+evidence/recipes/.summary
+evidence/baseline/*.rpm
+.DS_Store

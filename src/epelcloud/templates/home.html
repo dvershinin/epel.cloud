@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}epel.cloud — EPEL mirror and Enterprise Linux cookbook{% endblock %}
+{% block description %}A fast, Cloudflare-cached EPEL mirror with a cookbook of tested recipes for RHEL, AlmaLinux and Rocky Linux servers.{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Extra Packages for Enterprise Linux, closer to you</p>
+    <h1>A fast EPEL mirror, with a cookbook on top.</h1>
+    <p class="lede">epel.cloud serves the EPEL package repositories through Cloudflare's
+    edge cache, so <code>dnf</code> fetches metadata and RPMs from a location near your
+    servers. The cookbook is a small set of Enterprise Linux recipes we actually ran,
+    with real output, on the dates stamped on them.</p>
+    <p class="hero-actions">
+      <a class="button" href="/recipes">Browse the recipes</a>
+      <a class="button button-quiet" href="/mirror">Use the mirror</a>
+    </p>
+  </div>
+  <figure class="hero-terminal">
+    <figcaption>/etc/yum.repos.d/epel.repo</figcaption>
+    <pre><code>[epel]
+name=EPEL $releasever via epel.cloud
+baseurl=https://epel.cloud/pub/epel/$releasever/Everything/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever</code></pre>
+  </figure>
+</section>
+
+<section class="recipes-section">
+  <h2 class="section-title">Tested recipes</h2>
+  <p class="section-note">Every recipe was executed start to finish in a clean
+  Enterprise Linux environment before publishing. The stamp shows when.</p>
+  <div class="card-grid">
+    {% for recipe in recipes %}
+    {% include "partials/recipe_card.html" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="mirror-section">
+  <h2 class="section-title">About the mirror</h2>
+  <div class="mirror-cols">
+    <p>The mirror namespace is <code>/pub/epel/</code>, the same layout as any
+    Fedora mirror. EPEL 8, 9 and 10 are served live; EPEL 7 requests redirect to the
+    Fedora archives where they now live. RPM bytes and GPG signatures are passed
+    through unchanged from Fedora's own download servers, so <code>gpgcheck=1</code>
+    keeps working exactly as upstream intends.</p>
+    <p>There is no signup, no token and no rate limit aimed at package managers.
+    If you run Enterprise Linux machines far from the US, pointing
+    <code>dnf</code> here usually shortens metadata refresh and download times.
+    <a href="/mirror">Setup instructions&nbsp;→</a></p>
+  </div>
+</section>
+{% endblock %}

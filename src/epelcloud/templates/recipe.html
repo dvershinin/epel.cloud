@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ recipe.meta.title }} — epel.cloud{% endblock %}
+{% block description %}{{ recipe.meta.description }}{% endblock %}
+{% block head %}
+<script type="application/ld+json">{{ json_ld | tojson_ld | safe }}</script>
+{% endblock %}
+{% block content %}
+<article class="recipe">
+  <header class="recipe-header">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/recipes">Recipes</a> /</nav>
+    <h1>{{ recipe.meta.title }}</h1>
+    <p class="lede">{{ recipe.meta.description }}</p>
+    <div class="recipe-meta">
+      <div class="card-stamp">
+        <span class="stamp-word">Tested</span>
+        <span class="stamp-date">{{ recipe.meta.last_tested.isoformat() }}</span>
+      </div>
+      <dl class="fact-strip">
+        <div><dt>Works on</dt><dd>{{ recipe.meta.releases | join(' · ') }}</dd></div>
+        <div><dt>Architectures</dt><dd>{{ recipe.meta.arches | join(' · ') }}</dd></div>
+        <div><dt>Time</dt><dd>{{ recipe.meta.time }}</dd></div>
+        <div><dt>Tested on</dt><dd>{{ recipe.meta.tested_on }}</dd></div>
+        <div><dt>Updated</dt><dd>{{ recipe.meta.updated.isoformat() }}</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <aside class="ingredients" aria-label="Ingredients">
+    <h2>Ingredients</h2>
+    <ul>
+      {% for ingredient in recipe.meta.ingredients %}
+      <li><code>{{ ingredient.name }}</code> <span class="ingredient-repo">{{ ingredient.repo }}</span></li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <div class="recipe-body">
+    {{ recipe.body_html | safe }}
+  </div>
+
+  <footer class="recipe-sources">
+    <h2>Sources</h2>
+    <ul>
+      {% for source in recipe.meta.sources %}
+      <li><a href="{{ source.url }}" rel="noopener">{{ source.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </footer>
+</article>
+{% endblock %}

@@ -1,0 +1,12 @@
+== https://epel.cloud/pub/epel/8/Everything/x86_64/repodata/repomd.xml
+200 1183 bytes
+== https://epel.cloud/pub/epel/9/Everything/x86_64/repodata/repomd.xml
+200 1182 bytes
+== https://epel.cloud/pub/epel/9/Everything/aarch64/repodata/repomd.xml
+200 1190 bytes
+== https://epel.cloud/pub/epel/10/Everything/x86_64/repodata/repomd.xml
+200 1187 bytes
+== EPEL7 redirect
+301 -> https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/repodata/repomd.xml
+== Range request on a real RPM (first find one via repodata dir listing)
+href="fail2ban-server-1.1.0-6.el9.noarch.rpm"

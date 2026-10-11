@@ -1,0 +1,234 @@
+# recipe test: nginx-brotli
+# image: almalinux/10-init  platform: linux/arm64  date: 2026-10-11T10:26:43Z
+AlmaLinux release 10.2 (Lavender Lion)
+# ---
+=== 1. add the repository ===
++ echo '=== 1. add the repository ==='
++ dnf -y install https://extras.getpagespeed.com/release-latest.rpm
+AlmaLinux 10 - AppStream                        631 kB/s | 2.7 MB     00:04    
+AlmaLinux 10 - BaseOS                           2.5 MB/s |  65 MB     00:25    
+AlmaLinux 10 - CRB                               21 kB/s | 629 kB     00:30    
+AlmaLinux 10 - Extras                            13 kB/s |  13 kB     00:01    
+release-latest.rpm                               43 kB/s |  38 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package                     Arch    Version                 Repository    Size
+================================================================================
+Installing:
+ getpagespeed-extras-release noarch  1:11-81.dnf             @commandline  38 k
+Installing dependencies:
+ dbus-libs                   aarch64 1:1.14.10-5.el10        baseos       155 k
+ python3-dateutil            noarch  1:2.9.0.post0-1.el10_0  baseos       327 k
+ python3-dbus                aarch64 1.3.2-8.el10            baseos       159 k
+ python3-dnf-plugins-core    noarch  4.7.0-10.el10           baseos       294 k
+ python3-six                 noarch  1.16.0-16.el10          baseos        41 k
+ python3-systemd             aarch64 235-11.el10             baseos       107 k
+Installing weak dependencies:
+ dnf-plugins-core            noarch  4.7.0-10.el10           baseos        37 k
+ epel-release                noarch  10-6.el10               extras        18 k
+
+Transaction Summary
+================================================================================
+Install  9 Packages
+
+Total size: 1.1 M
+Total download size: 1.1 M
+Installed size: 3.8 M
+Downloading Packages:
+(1/8): dnf-plugins-core-4.7.0-10.el10.noarch.rp 326 kB/s |  37 kB     00:00    
+(2/8): dbus-libs-1.14.10-5.el10.aarch64.rpm     513 kB/s | 155 kB     00:00    
+(3/8): python3-dbus-1.3.2-8.el10.aarch64.rpm    575 kB/s | 159 kB     00:00    
+(4/8): python3-six-1.16.0-16.el10.noarch.rpm    250 kB/s |  41 kB     00:00    
+(5/8): python3-dateutil-2.9.0.post0-1.el10_0.no 495 kB/s | 327 kB     00:00    
+(6/8): epel-release-10-6.el10.noarch.rpm        285 kB/s |  18 kB     00:00    
+(7/8): python3-systemd-235-11.el10.aarch64.rpm  469 kB/s | 107 kB     00:00    
+(8/8): python3-dnf-plugins-core-4.7.0-10.el10.n 585 kB/s | 294 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           255 kB/s | 1.1 MB     00:04     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-235-11.el10.aarch64                    1/9 
+  Installing       : python3-six-1.16.0-16.el10.noarch                      2/9 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el10_0.noarch         3/9 
+  Installing       : dbus-libs-1:1.14.10-5.el10.aarch64                     4/9 
+  Installing       : python3-dbus-1.3.2-8.el10.aarch64                      5/9 
+  Installing       : python3-dnf-plugins-core-4.7.0-10.el10.noarch          6/9 
+  Installing       : dnf-plugins-core-4.7.0-10.el10.noarch                  7/9 
+  Installing       : epel-release-10-6.el10.noarch                          8/9 
+  Running scriptlet: epel-release-10-6.el10.noarch                          8/9 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+  Installing       : getpagespeed-extras-release-1:11-81.dnf.noarch         9/9 
+  Running scriptlet: getpagespeed-extras-release-1:11-81.dnf.noarch         9/9 
+----------------------------------------------------------------------
+
+The GetPageSpeed repository has been installed.
+
+
+
+----------------------------------------------------------------------
+
+
+Installed:
+  dbus-libs-1:1.14.10-5.el10.aarch64                                            
+  dnf-plugins-core-4.7.0-10.el10.noarch                                         
+  epel-release-10-6.el10.noarch                                                 
+  getpagespeed-extras-release-1:11-81.dnf.noarch                                
+  python3-dateutil-1:2.9.0.post0-1.el10_0.noarch                                
+  python3-dbus-1.3.2-8.el10.aarch64                                             
+  python3-dnf-plugins-core-4.7.0-10.el10.noarch                                 
+  python3-six-1.16.0-16.el10.noarch                                             
+  python3-systemd-235-11.el10.aarch64                                           
+
+Complete!
++ echo '=== 2. install nginx + brotli module ==='
++ dnf -y install nginx nginx-module-brotli
+=== 2. install nginx + brotli module ===
+GetPageSpeed packages for Enterprise Linux 10 -  97 kB/s | 226 kB     00:02    
+GetPageSpeed packages for Enterprise Linux 10 -  62 kB/s | 108 kB     00:01    
+Extra Packages for Enterprise Linux 10 - aarch6 612 kB/s | 6.6 MB     00:11    
+Dependencies resolved.
+================================================================================
+ Package            Arch    Version                   Repository           Size
+================================================================================
+Installing:
+ nginx              aarch64 3:1.30.5-69.el10.gps      getpagespeed-extras 1.1 M
+ nginx-module-brotli
+                    aarch64 1:1.30.5+0.1.4-4.el10.gps getpagespeed-extras  27 k
+Installing dependencies:
+ libbrotli          aarch64 1.1.0-8.el10_2            baseos              344 k
+ openssl35-libs     aarch64 3.5.9-1.el10              getpagespeed-extras 2.2 M
+
+Transaction Summary
+================================================================================
+Install  4 Packages
+
+Total download size: 3.6 M
+Installed size: 11 M
+Downloading Packages:
+(1/4): nginx-module-brotli-1.30.5+0.1.4-4.el10.  13 kB/s |  27 kB     00:02    
+(2/4): libbrotli-1.1.0-8.el10_2.aarch64.rpm     579 kB/s | 344 kB     00:00    
+(3/4): nginx-1.30.5-69.el10.gps.aarch64.rpm     276 kB/s | 1.1 MB     00:04    
+(4/4): openssl35-libs-3.5.9-1.el10.aarch64.rpm  480 kB/s | 2.2 MB     00:04    
+--------------------------------------------------------------------------------
+Total                                           694 kB/s | 3.6 MB     00:05     
+GetPageSpeed packages for Enterprise Linux 10 - 3.0 MB/s | 3.1 kB     00:00    
+Importing GPG key 0xC7867353:
+ Userid     : "GetPageSpeed LLC <builder@getpagespeed.com>"
+ Fingerprint: 3D88 6B41 39AD 1046 3DC1 B085 82CC 0F5C C786 7353
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-GETPAGESPEED-2023
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Running scriptlet: nginx-3:1.30.5-69.el10.gps.aarch64                     1/1 
+  Preparing        :                                                        1/1 
+  Installing       : libbrotli-1.1.0-8.el10_2.aarch64                       1/4 
+  Installing       : openssl35-libs-3.5.9-1.el10.aarch64                    2/4 
+  Running scriptlet: openssl35-libs-3.5.9-1.el10.aarch64                    2/4 
+  Running scriptlet: nginx-3:1.30.5-69.el10.gps.aarch64                     3/4 
+  Installing       : nginx-3:1.30.5-69.el10.gps.aarch64                     3/4 
+  Running scriptlet: nginx-3:1.30.5-69.el10.gps.aarch64                     3/4 
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* http://nginx.org/en/docs/
+
+NGINX Extras documentation is available at:
+* https://nginx-extras.getpagespeed.com/
+
+----------------------------------------------------------------------
+
+  Installing       : nginx-module-brotli-1:1.30.5+0.1.4-4.el10.gps.aarch6   4/4 
+  Running scriptlet: nginx-module-brotli-1:1.30.5+0.1.4-4.el10.gps.aarch6   4/4 
+----------------------------------------------------------------------
+
+The Brotil dynamic modules for nginx have been installed.
+To enable these modules, add the following to /etc/nginx/nginx.conf
+and reload nginx:
+
+    load_module modules/ngx_http_brotli_filter_module.so;
+    load_module modules/ngx_http_brotli_static_module.so;
+
+Please refer to documentation here:
+https://github.com/GetPageSpeed/ngx_brotli
+
+----------------------------------------------------------------------
+
+  Running scriptlet: nginx-3:1.30.5-69.el10.gps.aarch64                     4/4 
+  Running scriptlet: nginx-module-brotli-1:1.30.5+0.1.4-4.el10.gps.aarch6   4/4 
+
+Installed:
+  libbrotli-1.1.0-8.el10_2.aarch64                                              
+  nginx-3:1.30.5-69.el10.gps.aarch64                                            
+  nginx-module-brotli-1:1.30.5+0.1.4-4.el10.gps.aarch64                         
+  openssl35-libs-3.5.9-1.el10.aarch64                                           
+
+Complete!
++ nginx -v
+nginx version: nginx/1.30.5
++ rpm -q nginx nginx-module-brotli
+nginx-1.30.5-69.el10.gps.aarch64
+nginx-module-brotli-1.30.5+0.1.4-4.el10.gps.aarch64
++ echo '=== module files ==='
++ rpm -ql nginx-module-brotli
+=== module files ===
+/usr/lib/.build-id
+/usr/lib/.build-id/90
+/usr/lib/.build-id/90/cb3f66e86d1a3192876f365819940d4072fa40
+/usr/lib/.build-id/a1
+/usr/lib/.build-id/a1/be1e7fadd4b8c8ee2913c384ad53fdc1dfd72a
+/usr/lib/.build-id/aa
+/usr/lib/.build-id/aa/c1f06ba8daf7a4259c56577dc5f1c4aa72df54
+/usr/lib/.build-id/da
+/usr/lib/.build-id/da/b12aa9bd5eb3e2c553dfbc3a4e3eaa267bb718
+/usr/lib64/nginx/modules/ngx_http_brotli_filter_module-debug.so
+/usr/lib64/nginx/modules/ngx_http_brotli_filter_module.so
+/usr/lib64/nginx/modules/ngx_http_brotli_static_module-debug.so
+/usr/lib64/nginx/modules/ngx_http_brotli_static_module.so
+/usr/share/doc/nginx-module-brotli
+/usr/share/doc/nginx-module-brotli/LICENSE
++ echo '=== 3. load and configure ==='
++ sed -i '1i load_module modules/ngx_http_brotli_filter_module.so;\nload_module modules/ngx_http_brotli_static_module.so;' /etc/nginx/nginx.conf
+=== 3. load and configure ===
++ tee /etc/nginx/conf.d/brotli.conf
++ echo '=== 4. validate and start ==='
++ nginx -t
+=== 4. validate and start ===
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
++ systemctl enable --now nginx
+Created symlink '/etc/systemd/system/multi-user.target.wants/nginx.service' → '/usr/lib/systemd/system/nginx.service'.
++ sleep 2
++ echo '=== verify ==='
+=== verify ===
++ grep -i content-encoding
++ curl -sI -H 'Accept-Encoding: br' http://localhost/
+Content-Encoding: br
++ grep -qi 'content-encoding: br'
++ curl -sI -H 'Accept-Encoding: br' http://localhost/
++ curl -sI -H 'Accept-Encoding: gzip' http://localhost/
++ grep -i content-encoding
+(no gzip header: gzip may be off by default)
++ echo '(no gzip header: gzip may be off by default)'
++ curl -so /dev/null -w '%{size_download} bytes (br)\n' -H 'Accept-Encoding: br' http://localhost/
+423 bytes (br)
++ curl -so /dev/null -w '%{size_download} bytes (plain)\n' http://localhost/
+896 bytes (plain)
+++ curl -so /dev/null -w '%{size_download}' -H 'Accept-Encoding: br' http://localhost/
++ BR=423
+++ curl -so /dev/null -w '%{size_download}' http://localhost/
+RECIPE OK
++ PLAIN=896
++ '[' 423 -lt 896 ']'
++ echo 'RECIPE OK'
+# exit status: 0

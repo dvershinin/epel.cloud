@@ -1,0 +1,13 @@
+<article class="card">
+  <div class="card-stamp">
+    <span class="stamp-word">Tested</span>
+    <span class="stamp-date">{{ recipe.meta.last_tested.isoformat() }}</span>
+  </div>
+  <{{ card_heading | default('h3') }} class="card-title"><a href="{{ recipe.url }}">{{ recipe.meta.title }}</a></{{ card_heading | default('h3') }}>
+  <p class="card-desc">{{ recipe.meta.description }}</p>
+  <dl class="card-facts">
+    <div><dt>Works on</dt><dd>{{ recipe.meta.releases | join(' · ') }}</dd></div>
+    <div><dt>Time</dt><dd>{{ recipe.meta.time }}</dd></div>
+    <div><dt>Ingredients</dt><dd>{{ recipe.meta.ingredients | length }} package{{ 's' if recipe.meta.ingredients | length != 1 else '' }}</dd></div>
+  </dl>
+</article>

@@ -1,0 +1,35 @@
+# recipe test: valkey-replaces-redis
+# image: almalinux/10-init  platform: linux/arm64  date: 2026-10-11T10:26:43Z
+AlmaLinux release 10.2 (Lavender Lion)
+# ---
++ HAVE_REDIS=0
++ dnf -y install redis
+AlmaLinux 10 - AppStream                        673 kB/s | 2.7 MB     00:04    
+AlmaLinux 10 - BaseOS                           710 kB/s |  65 MB     01:33    
+AlmaLinux 10 - CRB                              454 kB/s | 629 kB     00:01    
+AlmaLinux 10 - Extras                           8.0 kB/s |  13 kB     00:01    
+No match for argument: redis
+Error: Unable to find a match: redis
++ echo '=== no redis package on this release; testing the new-install path ==='
+=== no redis package on this release; testing the new-install path ===
+=== 1. install valkey ===
++ echo '=== 1. install valkey ==='
++ dnf -y install valkey
+Last metadata expiration check: 0:00:01 ago on Sun Oct 11 10:28:29 2026.
+Dependencies resolved.
+================================================================================
+ Package          Architecture   Version                 Repository        Size
+================================================================================
+Installing:
+ valkey           aarch64        8.0.11-1.el10_2         appstream        1.6 M
+Installing dependencies:
+ logrotate        aarch64        3.22.0-5.el10           baseos            74 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages
+
+Total download size: 1.6 M
+Installed size: 5.3 M
+Downloading Packages:
+(1/2): logrotate-3.22.0-5.el10.aarch64.rpm      433 kB/s |  74 kB     00:00    

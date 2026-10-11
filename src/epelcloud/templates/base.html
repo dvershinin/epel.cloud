@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{% endblock %}</title>
+<meta name="description" content="{% block description %}{% endblock %}">
+{% if canonical %}
+<link rel="canonical" href="{{ canonical }}">
+{% endif %}
+<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+<link rel="icon" href="{{ asset('img/favicon.svg') }}" type="image/svg+xml">
+{% block head %}{% endblock %}
+</head>
+<body>
+<header class="masthead">
+  <nav class="wrap masthead-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-epel">epel</span><span class="brand-dot">.</span><span class="brand-cloud">cloud</span></a>
+    <ul class="nav-links">
+      <li><a href="/recipes">Recipes</a></li>
+      <li><a href="/mirror">Mirror</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>epel.cloud is an independent, Cloudflare-cached mirror of the
+    <a href="https://docs.fedoraproject.org/en-US/epel/" rel="noopener">EPEL</a> repositories,
+    plus a cookbook of tested Enterprise Linux recipes. It is not an official Fedora
+    or Red&nbsp;Hat service. Packages and metadata come from Fedora mirrors unchanged.</p>
+    <p>Run by <a href="https://www.getpagespeed.com/" rel="noopener">GetPageSpeed</a>, packagers of
+    NGINX modules and server software for Enterprise Linux.
+    Mirror content follows upstream licensing; recipes are
+    tested on the dates stated and may age.</p>
+  </div>
+</footer>
+</body>
+</html>

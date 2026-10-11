@@ -1,0 +1,21 @@
+== Full download + sig check
+200 476574 bytes
+== Range request (bytes=0-1023)
+206 1024 bytes accept-ranges={"date":["Sun, 11 Oct 2026 09:54:58 GMT"],
+"content-type":["application/x-rpm"],
+"content-length":["1024"],
+"server":["cloudflare"],
+"age":["0"],
+"apptime":["D=4813"],
+"nel":["{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"],
+"content-security-pol
+HTTP/2 206 
+content-length: 1024
+content-range: bytes 0-1023/476574
+== archive host
+200
+== vault host
+200
+== www host root
+200
+758c9dcf4a86b0b5266ce887a6c040632a3e3c52e2366b7d70880d91f936e2a7  f2b.rpm
